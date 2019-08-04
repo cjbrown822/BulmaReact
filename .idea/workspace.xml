@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f63b3fd-312d-4eb2-8fdd-fe9226a49ded" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="1f63b3fd-312d-4eb2-8fdd-fe9226a49ded" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564889459209</updated>
-      <workItem from="1564889461390" duration="1189000" />
+      <workItem from="1564889461390" duration="1320000" />
     </task>
     <task id="LOCAL-00001" summary="Init Bulma Components">
       <created>1564890634067</created>
@@ -97,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564890634067</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update init">
+      <created>1564890670211</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1564890670211</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +121,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init Bulma Components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init Bulma Components" />
+    <MESSAGE value="update init" />
+    <option name="LAST_COMMIT_MESSAGE" value="update init" />
   </component>
 </project>
