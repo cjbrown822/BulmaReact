@@ -6,9 +6,10 @@ import './styles/main.scss';
 function App() {
   return (
       <Bulma.Container>
-        <Bulma.Level display={""}>
+        <Bulma.Level>
           <Bulma.LeftLevelItem>
-            Inside Left
+            <p>Inside Left</p>
+            <p>Another Left</p>
           </Bulma.LeftLevelItem>
           <Bulma.LevelItem>
             Middle
