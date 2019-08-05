@@ -1,6 +1,6 @@
 import React from "react";
 
-export const style = WrappedComponent => props => {
+export const withStyle = WrappedComponent => props => {
 	const { primary, danger, warning, success, info, ...rest} = props;
 	let forwardedStyle = "";
 	if(primary) forwardedStyle = "primary";
