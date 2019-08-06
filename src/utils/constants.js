@@ -3,12 +3,10 @@ const Constants = {
 		Mobile: "mobile",
 		Desktop: "desktop"
 	},
-	Level: {
-		Direction: {
+	Direction: {
 			Left: "left",
 			Right: "right"
 		}
-	}
 };
 
 export default Constants;

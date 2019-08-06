@@ -16,7 +16,7 @@ const SideItem = styled.div.attrs(props => ({
 }))``;
 
 const LeftLevelItem = props => {
-	return (<SideItem side={Constants.Level.Direction.Left}>
+	return (<SideItem side={Constants.Direction.Left}>
 				{Array.isArray(props.children) ? props.children.map((child, index) => (
 					<LevelItem key={index}>
 						{child}
@@ -30,7 +30,7 @@ const LeftLevelItem = props => {
 };
 
 const RightLevelItem = props => {
-	return (<SideItem side={Constants.Level.Direction.Right}>
+	return (<SideItem side={Constants.Direction.Right}>
 				{Array.isArray(props.children) ? props.children.map((child, index) => (
 					<LevelItem key={index}>
 						{child}
