@@ -3,6 +3,7 @@ import {Level, LeftLevelItem, RightLevelItem, LevelItem } from "./layout/level";
 import Media, { MediaContent, MediaLeft, MediaRight} from "./layout/media";
 import Constants from "../utils/constants";
 import Image from "./elements/img";
+import Hero, { HeroHeader, HeroBody, HeroFooter } from "./layout/hero";
 
 
 const Bulma = {
@@ -16,7 +17,11 @@ const Bulma = {
 	MediaRight,
 	MediaContent,
 	Media,
-	Image
+	Image,
+	Hero,
+	HeroBody,
+	HeroHeader,
+	HeroFooter
 };
 
 export default Bulma;

@@ -5,9 +5,19 @@ import './styles/main.scss';
 
 function App() {
   return (
-      <Bulma.Container>
-        <Bulma.Image url={'./Buffalo.jpg'} alt={"Buffalo Bill Cody"} rounded/>
-      </Bulma.Container>
+    <Bulma.Hero danger>
+        <Bulma.HeroHeader>
+            <p className={"title"}>Header</p>
+        </Bulma.HeroHeader>
+        <Bulma.HeroBody>
+            <Bulma.Container>
+                <p className={"title"}>I know I am cool</p>
+            </Bulma.Container>
+        </Bulma.HeroBody>
+        <Bulma.HeroFooter>
+            <p className={"title"}>Footer</p>
+        </Bulma.HeroFooter>
+    </Bulma.Hero>
   );
 }
 
