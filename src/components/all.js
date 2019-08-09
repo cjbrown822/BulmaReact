@@ -6,6 +6,9 @@ import Image from "./elements/img";
 import Hero, { HeroHeader, HeroBody, HeroFooter } from "./layout/hero";
 import Section from "./layout/section";
 import Footer from "./layout/footer";
+import Field from "./forms/field";
+import Input from "./forms/input";
+import Form from "./forms/form";
 
 
 const Bulma = {
@@ -25,7 +28,10 @@ const Bulma = {
 	HeroHeader,
 	HeroFooter,
 	Section,
-	Footer
+	Footer,
+	Field,
+	Input,
+	Form
 };
 
 export default Bulma;

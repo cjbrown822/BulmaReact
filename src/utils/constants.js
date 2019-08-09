@@ -40,6 +40,17 @@ const Constants = {
 			OneByTwo: "1by2",
 			OneByThree: "1by3"
 		}
+	},
+	Field: {
+		Group: {
+			Centered: "centered",
+			Right: "right",
+			Multiline: "multiline"
+		},
+		AddOns : {
+			Centered: "centered",
+			Right: "right"
+		}
 	}
 };
 

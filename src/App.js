@@ -5,14 +5,23 @@ import './styles/main.scss';
 
 function App() {
   return (
-    <Bulma.Hero danger is={"fullheight"}>
+    <Bulma.Hero is={"fullheight"}>
         <Bulma.HeroHeader>
             <p className={"title"}>Header</p>
         </Bulma.HeroHeader>
         <Bulma.HeroBody>
             <Bulma.Container>
                 <Bulma.Section>
-                    <p className={"title"}>I know I am cool</p>
+                    <Bulma.Form style={{maxWidth:'800px'}}>
+                        <Bulma.Field horizontal>
+                            <Bulma.Input name={"FirstName"} placeholder={"First name"} required/>
+                            <Bulma.Input name={"LastName"} placeholder={"Last name"} required/>
+                        </Bulma.Field>
+                        <Bulma.Field>
+                            <Bulma.Input name={"Email"} placeholder={"Email"} type={"email"} required/>
+                            <Bulma.Input name={"Password"} placeholder={"Password"} type={"password"} required/>
+                        </Bulma.Field>
+                    </Bulma.Form>
                 </Bulma.Section>
                 <Bulma.Section is={"medium"}>
                     <p className={"subtitle"}>Subtitle</p>
