@@ -9,6 +9,7 @@ import Footer from "./layout/footer";
 import Field from "./forms/field";
 import Input from "./forms/input";
 import Form from "./forms/form";
+import Icon from "./elements/icon";
 
 
 const Bulma = {
@@ -31,7 +32,8 @@ const Bulma = {
 	Footer,
 	Field,
 	Input,
-	Form
+	Form,
+	Icon
 };
 
 export default Bulma;

@@ -29,6 +29,7 @@
     ]
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.1",
     "@storybook/addon-actions": "^5.1.10",
     "@storybook/addon-links": "^5.1.10",
     "@storybook/addons": "^5.1.10",
@@ -45,6 +46,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "@fortawesome/fontawesome-free": "^5.10.1"
   }
 }

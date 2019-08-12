@@ -5,14 +5,16 @@ import { FormContext } from "../../store/formcontext";
 import Proptypes from "prop-types";
 import styled from "styled-components";
 import useInputValidation from "../../hooks/inputvalidation";
+import { InputContext, InputContextProvider } from "../../store/inputcontext";
 
 const InputCore = withStyle(styled.input.attrs(({ type, styleName }) => ({
 	className: `input ${styleName && `is-${styleName}`}`,
 	type: type
 }))``);
 
-const Input = ({name, type, required, validation, children, ...rest}) => {
+const Input = ({name, type, required, validation, children, leftIcon, rightIcon, loading, ...rest}) => {
 	const [ errorList, dispatch ] = useContext(FormContext);
+	const [ hasIconsLeft, hasIconsRight, setHasIconsLeft, setHasIconsRight] = useContext(InputContext);
 	const { value, touched, errors, onValidate } = useInputValidation(required, validation);
 	const [hasError, setHasError ] = useState(false);
 	const handleError = useCallback((e) => {
@@ -27,17 +29,30 @@ const Input = ({name, type, required, validation, children, ...rest}) => {
 		}).length !== 0 : false;
 		handleError(e);
 	}, [errors, handleError]);
+	if(leftIcon){
+		setHasIconsLeft(true);
+	}
+	if(rightIcon){
+		setHasIconsRight(true);
+	}
 	return (
 		<Fragment>
 			<InputCore name={name} type={type} {...rest} onBlur={onValidate} onChange={onValidate} value={value} danger={hasError}/>
-			{children}
+			{leftIcon && leftIcon("left", hasError)}
+			{rightIcon && rightIcon("right", hasError)}
 		</Fragment>
 
 	)
 };
 
 Input.propTypes = {
-	name: Proptypes.string.isRequired
+	name: Proptypes.string.isRequired,
+	leftIcon: Proptypes.func,
+	rightIcon: Proptypes.func,
+	validation: Proptypes.arrayOf(Proptypes.shape({
+		regex: Proptypes.any.isRequired,
+		message: Proptypes.string.isRequired
+	}))
 };
 
 export default Input;

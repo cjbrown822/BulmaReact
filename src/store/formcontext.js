@@ -3,7 +3,7 @@ import FormValidationReducer from "../reducers/formvalidationreducer";
 
 const FormContext = createContext({});
 
-const FormContextProvider = ({children,...rest}) => {
+const FormContextProvider = ({children}) => {
 	const [errors, dispatch] = useReducer(FormValidationReducer, {});
 	const [ disabled, setDisabled ] = useState(true);
 

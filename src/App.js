@@ -3,6 +3,7 @@ import Bulma from "./components/all";
 
 import './styles/main.scss';
 
+const LockInputIcon = (direction, hasError) => <Bulma.Icon icon={"envelope"} direction={direction} danger={hasError}/>;
 function App() {
   return (
     <Bulma.Hero is={"fullheight"}>
@@ -17,14 +18,16 @@ function App() {
                             <Bulma.Input name={"FirstName"} placeholder={"First name"} required/>
                             <Bulma.Input name={"LastName"} placeholder={"Last name"} required/>
                         </Bulma.Field>
+                        <Bulma.Field hasIcons={"left"}>
+                            <Bulma.Input name={"Email"} placeholder={"Email"} type={"email"} required leftIcon={LockInputIcon}/>
+                        </Bulma.Field>
                         <Bulma.Field>
-                            <Bulma.Input name={"Email"} placeholder={"Email"} type={"email"} required/>
                             <Bulma.Input name={"Password"} placeholder={"Password"} type={"password"} required/>
                         </Bulma.Field>
                     </Bulma.Form>
                 </Bulma.Section>
                 <Bulma.Section is={"medium"}>
-                    <p className={"subtitle"}>Subtitle</p>
+
                 </Bulma.Section>
             </Bulma.Container>
         </Bulma.HeroBody>
