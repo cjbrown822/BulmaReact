@@ -1,6 +1,6 @@
 import React from "react";
 
-const withFieldOptions = WrappedComponent => ({addons, horizontal, grouped, children, ...rest}) => {
+const withFieldOptions = WrappedComponent => ({addons, loading, horizontal, grouped, children, ...rest}) => {
 	let addonsOptions = null;
 	if(addons){
 		if(typeof addons === "string"){
@@ -10,7 +10,9 @@ const withFieldOptions = WrappedComponent => ({addons, horizontal, grouped, chil
 		}
 	}
 	let horizontalOption = null;
+	let loadingOption = null;
 	if(horizontal) horizontalOption = 'is-horizontal';
+	if(loading) loadingOption = "is-loading";
 	let groupedOptions = null;
 	if(grouped){
 		if(typeof addons === "string"){
@@ -20,7 +22,7 @@ const withFieldOptions = WrappedComponent => ({addons, horizontal, grouped, chil
 		}
 	}
 	return (
-		<WrappedComponent addons={addonsOptions} horizontal={horizontalOption} grouped={groupedOptions} {...rest}>
+		<WrappedComponent addons={addonsOptions} horizontal={horizontalOption} grouped={groupedOptions} loading={loadingOption} {...rest}>
 			{children}
 		</WrappedComponent>
 	)

@@ -6,9 +6,10 @@ import Proptypes from "prop-types";
 import styled from "styled-components";
 import useInputValidation from "../../hooks/inputvalidation";
 import { InputContext, InputContextProvider } from "../../store/inputcontext";
+import withSize from "../higherorder/sizehoc";
 
-const InputCore = withStyle(styled.input.attrs(({ type, styleName }) => ({
-	className: `input ${styleName && `is-${styleName}`}`,
+const InputCore = withStyle(styled.input.attrs(({ ratio, type, styleName }) => ({
+	className: `input ${styleName && `is-${styleName}`} ${ratio && ratio}`,
 	type: type
 }))``);
 
@@ -55,4 +56,4 @@ Input.propTypes = {
 	}))
 };
 
-export default Input;
+export default withSize(Input);

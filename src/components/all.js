@@ -10,6 +10,8 @@ import Field from "./forms/field";
 import Input from "./forms/input";
 import Form from "./forms/form";
 import Icon from "./elements/icon";
+import TextArea from "./forms/textarea";
+import Select from "./forms/select";
 
 
 const Bulma = {
@@ -33,7 +35,9 @@ const Bulma = {
 	Field,
 	Input,
 	Form,
-	Icon
+	Icon,
+	TextArea,
+	Select
 };
 
 export default Bulma;
