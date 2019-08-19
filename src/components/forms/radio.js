@@ -7,7 +7,7 @@ const RadioCore = styled.label.attrs(({disabled}) => ({
 
 const Radio = ({disabled, name, checked, children, ...rest}) =>
 	(<RadioCore disabled={disabled} {...rest}>
-		<input type={"radio"} name={name} disabled={disabled} checked={checked}/>
+		<input type={"radio"} name={name} disabled={disabled} defaultChecked={checked}/>
 		{children}
 	</RadioCore>);
 

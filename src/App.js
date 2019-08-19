@@ -2,6 +2,7 @@ import React from 'react';
 import Bulma from "./components/all";
 
 import './styles/main.scss';
+import Button, {SubmitButton} from "./components/elements/button";
 
 const EnvelopeInputIcon = (direction, hasError) => <Bulma.Icon icon={"envelope"} direction={direction} danger={hasError}/>;
 const GlobeInputIcon = (direction, hasError) => <Bulma.Icon icon={"globe"} direction={direction} danger={hasError}/>;
@@ -54,8 +55,8 @@ function App() {
                             </Bulma.Radio>
                         </Bulma.Field>
                         <Bulma.Field  is={"expanded"} grouped>
-                            <button className={"button is-fullwidth"}>Submit</button>
-                            <button className={"button is-fullwidth"}>Reset</button>
+                            <SubmitButton is={"fullwidth"} primary>Submit</SubmitButton>
+                            <Button is={"fullwidth"} danger>Cancel</Button>
                         </Bulma.Field>
                     </Bulma.Form>
                 </Bulma.Section>

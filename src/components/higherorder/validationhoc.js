@@ -8,11 +8,9 @@ const withValidation = WrappedComponent => ({required, name, validation, ...rest
 	const { value, touched, errors, onValidate } = useInputValidation(required, validation);
 	const [hasError, setHasError ] = useState(false);
 	const handleError = useCallback((e) => {
-		if(touched){
-			dispatch({field: name, type: e ? HAS_ERROR : HAS_NO_ERROR});
-			setHasError(e);
-		}
-	}, [touched, name, dispatch, setHasError]);
+		setHasError(e);
+		dispatch({field: name, type: e ? HAS_ERROR : HAS_NO_ERROR});
+	}, [name, dispatch, setHasError]);
 	useEffect(() => {
 		const e = (errors.length > 0) ? errors.filter(e => {
 			return e.valid === false
@@ -20,7 +18,7 @@ const withValidation = WrappedComponent => ({required, name, validation, ...rest
 		handleError(e);
 	}, [errors, handleError]);
 	return (
-		<WrappedComponent value={value} required={required} name={name} onBlur={onValidate} onChange={onValidate} danger={hasError} hasError={hasError} {...rest}/>
+		<WrappedComponent value={value} required={required} name={name} onBlur={onValidate} onChange={onValidate} danger={hasError} hasError={hasError && touched} {...rest}/>
 	)
 };
 

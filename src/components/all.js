@@ -14,6 +14,7 @@ import TextArea from "./forms/textarea";
 import Select from "./forms/select";
 import Checkbox from "./forms/checkbox";
 import Radio from "./forms/radio";
+import Button, { SubmitButton, ResetButton} from "./elements/button";
 
 
 const Bulma = {
@@ -41,7 +42,10 @@ const Bulma = {
 	TextArea,
 	Select,
 	Checkbox,
-	Radio
+	Radio,
+	Button,
+	SubmitButton,
+	ResetButton
 };
 
 export default Bulma;
