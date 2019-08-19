@@ -2,9 +2,9 @@ import React from 'react';
 import Bulma from "./components/all";
 
 import './styles/main.scss';
-import Select from "./components/forms/select";
 
 const EnvelopeInputIcon = (direction, hasError) => <Bulma.Icon icon={"envelope"} direction={direction} danger={hasError}/>;
+const GlobeInputIcon = (direction, hasError) => <Bulma.Icon icon={"globe"} direction={direction} danger={hasError}/>;
 const LockInputIcon = (direction, hasError) => <Bulma.Icon icon={"lock"} direction={direction} danger={hasError}/>;
 const AstrickInputIcon = (direction, hasError) => <Bulma.Icon icon={"asterisk"} direction={direction} danger={hasError} is={"small"}/>;
 function App() {
@@ -22,19 +22,40 @@ function App() {
                             <Bulma.Input name={"LastName"} placeholder={"Last name"} required rightIcon={AstrickInputIcon}/>
                         </Bulma.Field>
                         <Bulma.Field hasIcons={"left"}>
-                            <Bulma.Input name={"Email"} placeholder={"Email"} type={"email"} required leftIcon={EnvelopeInputIcon} rightIcon={AstrickInputIcon}/>
+                            <Bulma.Input name={"Email"} placeholder={"Email"} type={"email"} required leftIcon={EnvelopeInputIcon}
+                                         rightIcon={AstrickInputIcon}
+                                         validation={[
+                                             {regex: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,
+                                                 message:"Email is not valid"}]}/>
                         </Bulma.Field>
                         <Bulma.Field>
                             <Bulma.Input name={"Password"} placeholder={"Password"} type={"password"} required leftIcon={LockInputIcon} rightIcon={AstrickInputIcon}/>
                         </Bulma.Field>
-                        <Bulma.Field loading>
-                            <Bulma.TextArea placeholder={"Some text goes here"}/>
+                        <Bulma.Field >
+                            <Bulma.TextArea required placeholder={"Some text goes here"} name={"SomeText"}/>
                         </Bulma.Field>
                         <Bulma.Field hasIcons={"left"}>
-                            <Select icon={EnvelopeInputIcon}>
+                            <Bulma.Select icon={GlobeInputIcon} name={"Select"}>
                                 <option value={1}>First</option>
                                 <option value={2}>Second</option>
-                            </Select>
+                            </Bulma.Select>
+                        </Bulma.Field>
+                        <Bulma.Field>
+                            <Bulma.Checkbox name={"Checkbox"}>
+                                I Agree to the Terms and Conditions
+                            </Bulma.Checkbox>
+                        </Bulma.Field>
+                        <Bulma.Field singleControl>
+                            <Bulma.Radio checked name={"Accept"}>
+                                Yes
+                            </Bulma.Radio>
+                            <Bulma.Radio name={"Accept"}>
+                                No
+                            </Bulma.Radio>
+                        </Bulma.Field>
+                        <Bulma.Field  is={"expanded"} grouped>
+                            <button className={"button is-fullwidth"}>Submit</button>
+                            <button className={"button is-fullwidth"}>Reset</button>
                         </Bulma.Field>
                     </Bulma.Form>
                 </Bulma.Section>

@@ -21,35 +21,75 @@ const Control = withSize(({addons, ratio, loading, children, ...rest}) => {
 	return <ControlWrapper addons={addons} hasIconsLeft={hasIconsLeft} hasIconsRight={hasIconsRight} loading={loading} ratio={ratio} {...rest}>{children}</ControlWrapper>
 });
 
-const Field = ({ addons, loading, horizontal, grouped, children, is, hasIcons, ...rest }) => {
+const HorizontalField = ({horizontal, children, loading, addons, ...rest}) => {
+	return (
+		<FieldCore horizontal={horizontal}>
+			<FieldBody {...rest}>
+				{children.map((child, index) => {
+					return (
+						<FieldCore key={index} addons={addons} >
+							<Control loading={loading}>
+								{child}
+							</Control>
+						</FieldCore>)
+				})}
+			</FieldBody>
+		</FieldCore>
+	)
+};
+
+const NormalField = ({horizontal, children, loading, addons, grouped, is, expanded, ...rest}) => {
+	return (
+		<Fragment>
+			{children.map((child, index) => {
+				return (
+					<FieldCore key={index} grouped={grouped}>
+						<Control loading={loading} is={is}>
+							{child}
+						</Control>
+					</FieldCore>)
+			})}
+		</Fragment>
+	)
+};
+
+const SingleControl = ({horizontal, children, loading, grouped, addons, is, ...rest}) => {
+	return (
+		<FieldCore grouped={grouped}>
+			<Control loading={loading} is={is}>
+				{children}
+			</Control>
+		</FieldCore>
+	)
+};
+
+const GroupedControl = ({horizontal, children, loading, grouped, addons, is, ...rest}) => {
+	return (
+		<FieldCore grouped={grouped}>
+			{children.map((child, index) => {
+				return (
+					<Control loading={loading} is={is} key={index}>
+					{child}
+					</Control>
+			)})}
+		</FieldCore>
+	)
+};
+
+const Field = ({ addons, loading, horizontal, grouped, children, is, hasIcons, singleControl, ...rest }) => {
 	const elements = React.Children.toArray(children);
 	return (
 		<Fragment>
 			<InputContextProvider>
-				{horizontal ?
-					<FieldCore horizontal={horizontal}>
-						<FieldBody {...rest}>
-							{elements.map((child, index) => {
-								return (
-									<FieldCore key={index} addons={addons} >
-										<Control loading={loading}>
-											{child}
-										</Control>
-									</FieldCore>)
-							})}
-						</FieldBody>
-					</FieldCore>
-					 :
-						<Fragment>
-							{elements.map((child, index) => {
-								return (
-									<FieldCore key={index}>
-										<Control loading={loading} is={is}>
-											{child}
-										</Control>
-									</FieldCore>)
-							})}
-						</Fragment>}
+				{
+					horizontal ?
+						<HorizontalField children={elements} horizontal={horizontal} loading={loading} addons={addons} hasIcons={hasIcons} {...rest}/> :
+					singleControl ?
+						<SingleControl addons={addons} loading={loading} grouped={grouped} children={children} is={is} hasIcons={hasIcons} {...rest}/> :
+						grouped ?
+							<GroupedControl addons={addons} loading={loading} grouped={grouped} children={children} is={is} hasIcons={hasIcons} {...rest}/> :
+							<NormalField addons={addons} loading={loading} grouped={grouped} children={elements} is={is} hasIcons={hasIcons} {...rest}/>
+				}
 			</InputContextProvider>
 		</Fragment>
 	)

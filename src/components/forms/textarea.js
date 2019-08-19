@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import withSize from "../higherorder/sizehoc";
 import { withStyle} from "../higherorder/stylehoc";
+import withValidation from "../higherorder/validationhoc";
+import PropTypes from "prop-types";
 
 const TextAreaCore = styled.textarea.attrs(({ratio, styleName, fixed}) => ({
 	className: `textarea ${styleName && `is-${styleName}`} ${ratio && ratio} ${fixed && `has-fixed-size`}`
@@ -9,4 +11,8 @@ const TextAreaCore = styled.textarea.attrs(({ratio, styleName, fixed}) => ({
 
 const TextArea = props => <TextAreaCore {...props}/>;
 
-export default withSize(withStyle(TextArea));
+TextArea.propTypes = {
+	name: PropTypes.string.isRequired
+};
+
+export default withValidation(withSize(withStyle(TextArea)));

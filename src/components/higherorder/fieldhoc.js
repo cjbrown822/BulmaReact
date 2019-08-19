@@ -15,9 +15,9 @@ const withFieldOptions = WrappedComponent => ({addons, loading, horizontal, grou
 	if(loading) loadingOption = "is-loading";
 	let groupedOptions = null;
 	if(grouped){
-		if(typeof addons === "string"){
+		if(typeof grouped === "string"){
 			groupedOptions = `is-grouped is-grouped-${grouped}`;
-		} else if(typeof addons === "boolean"){
+		} else if(typeof grouped === "boolean"){
 			groupedOptions = `is-grouped`;
 		}
 	}
