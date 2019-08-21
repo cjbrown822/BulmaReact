@@ -1,8 +1,8 @@
 component_depth: 1
 languages:
-- name: javascript
+  name: javascript
   production
     exclude
-    - src/App\.js
-    - src/serviceWorker\.js
-    - src/components/all\.js
+      src/App\.js
+      src/serviceWorker\.js
+      rc/components/all\.js
