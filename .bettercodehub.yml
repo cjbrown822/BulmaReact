@@ -1,7 +1,7 @@
-component_depth: 1
+component_depth: 3
 languages:
   javascript
-  exclude:
-      src/App\.js
-      src/serviceWorker\.js
-      rc/components/all\.js
+exclude:
+  src/App\.js
+  src/serviceWorker\.js
+  src/components/all\.js
