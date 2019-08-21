@@ -19,7 +19,7 @@ function App() {
             <Bulma.Container>
                 <Bulma.Section>
                     <Bulma.Columns>
-                        <Bulma.Column columnSizeModifier={[{size: Constants.Columns.Sizes.Half}]}>
+                        <Bulma.Column>
                             <Bulma.Form style={{maxWidth:'800px'}}>
                                 <Bulma.Field horizontal>
                                     <Bulma.Input name={"FirstName"} placeholder={"First name"} required rightIcon={AstrickInputIcon}/>
@@ -75,9 +75,6 @@ function App() {
                             Bertroff yaddle anx quarren su tarasin derlin ackbar dagobah. Fett jek carondian lahara kota. Triclops klatooinian sal-solo hapan vaathkree raymus trioculus. Wicket iv wyl sulorine sneevel dantari frozarns. Mygeeto marek senex bib braxant ki-adi-mundi darth piell. Cal tiin yoda tagge vao greeata nadd. Psadan lando anx kal kalee fode. Rieekan iridonian gunray gerb dulok gunray lowbacca. Joruus ithorian amidala calamari nal chiss ahsoka kasan. Bren naberrie fel ziro jeremoch. Kobok wicket durron luuke falleen jubnuk kashyyyk soontir colton.
                         </Bulma.Column>
                     </Bulma.Columns>
-                </Bulma.Section>
-                <Bulma.Section is={"medium"}>
-
                 </Bulma.Section>
             </Bulma.Container>
         </Bulma.HeroBody>
