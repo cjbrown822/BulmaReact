@@ -2,6 +2,6 @@ component_depth: 1
 languages:
   - javascript
 exclude
-  - .*/App\.js
-  - .*/serviceWorker\.js
-  - .*/all\.js
+  - src/App\.js
+  - src/serviceWorker\.js
+  - src/components/all\.js
