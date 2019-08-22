@@ -17,6 +17,12 @@ const withValidation = WrappedComponent => ({required, name, validation, ...rest
 		}).length !== 0 : false;
 		handleError(e);
 	}, [errors, handleError]);
+	const handleHasBeenTouched = useCallback((hasBeenTouched) => {
+		dispatch({field: `${name}Touched`, type: hasBeenTouched ? HAS_NO_ERROR : HAS_ERROR});
+	}, [dispatch]);
+	useEffect(() => {
+		handleHasBeenTouched(touched);
+	},[touched, handleHasBeenTouched]);
 	return (
 		<WrappedComponent value={value} required={required} name={name} onBlur={onValidate} onChange={onValidate} danger={hasError} hasError={hasError && touched} {...rest}/>
 	)
