@@ -23,7 +23,7 @@ function App() {
                             <Bulma.Form style={{maxWidth:'800px'}}>
                                 <Bulma.Field horizontal>
                                     <Bulma.Input name={"FirstName"} placeholder={"First name"} required rightIcon={AstrickInputIcon}/>
-                                    <Bulma.Input name={"LastName"} placeholder={"Last name"} required rightIcon={AstrickInputIcon}/>
+                                    <Bulma.Input name={"LastName"} placeholder={"Last name"} rightIcon={AstrickInputIcon}/>
                                 </Bulma.Field>
                                 <Bulma.Field hasIcons={"left"}>
                                     <Bulma.Input name={"Email"} placeholder={"Email"} type={"email"} required leftIcon={EnvelopeInputIcon}
