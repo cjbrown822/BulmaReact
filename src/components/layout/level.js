@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import styled from "styled-components";
 import withDisplay from "../higherorder/displayhoc";
 import Constants from "../../utils/constants";
@@ -15,31 +15,31 @@ const SideItem = styled.div.attrs(props => ({
 	className:`level-${props.side && props.side}`
 }))``;
 
-const LeftLevelItem = props => {
-	return (<SideItem side={Constants.Direction.Left}>
-				{Array.isArray(props.children) ? props.children.map((child, index) => (
-					<LevelItem key={index}>
+const MapItem = ({children, ...rest}) => {
+	return (
+		<Fragment>
+			{Array.isArray(children) ? children.map((child, index) => (
+					<LevelItem key={index} {...rest}>
 						{child}
 					</LevelItem>
 				)):
-					<LevelItem>
-						{props.children}
-					</LevelItem>
-				}
+				<LevelItem {...rest}>
+					{children}
+				</LevelItem>
+			}
+		</Fragment>
+	)
+};
+
+const LeftLevelItem = props => {
+	return (<SideItem side={Constants.Direction.Left}>
+				<MapItem {...props}/>
 			</SideItem>)
 };
 
 const RightLevelItem = props => {
 	return (<SideItem side={Constants.Direction.Right}>
-				{Array.isArray(props.children) ? props.children.map((child, index) => (
-					<LevelItem key={index}>
-						{child}
-					</LevelItem>
-				)) :
-					<LevelItem>
-						{props.children}
-					</LevelItem>
-				}
+				<MapItem {...props}/>
 			</SideItem>)
 };
 
