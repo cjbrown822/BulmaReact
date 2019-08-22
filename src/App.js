@@ -19,7 +19,7 @@ function App() {
             <Bulma.Container>
                 <Bulma.Section>
                     <Bulma.Columns>
-                        <Bulma.Column>
+                        <Bulma.Column columnSizeModifier={[{offset: true,size: Constants.Columns.Sizes.Half}]}>
                             <Bulma.Form style={{maxWidth:'800px'}}>
                                 <Bulma.Field horizontal>
                                     <Bulma.Input name={"FirstName"} placeholder={"First name"} required rightIcon={AstrickInputIcon}/>
