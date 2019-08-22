@@ -34,6 +34,7 @@
     "@storybook/addon-links": "^5.1.10",
     "@storybook/addons": "^5.1.10",
     "@storybook/react": "^5.1.10",
+    "mdx.macro": "^0.2.8",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -42,11 +43,11 @@
     "styled-components": "^4.3.2"
   },
   "peerDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
-    "styled-components": "^4.3.2",
-    "@fortawesome/fontawesome-free": "^5.10.1"
+    "styled-components": "^4.3.2"
   }
 }
