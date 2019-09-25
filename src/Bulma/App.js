@@ -1,9 +1,9 @@
 import React from 'react';
-import Bulma from "./Bulma/components/all";
+import Bulma from "./components/all";
 
-import './Bulma/styles/main.scss';
-import Button, {SubmitButton} from "./Bulma/components/elements/button";
-import Constants from "./Bulma/utils/constants";
+import './styles/main.scss';
+import Button, {SubmitButton} from "./components/elements/button";
+import Constants from "./utils/constants";
 
 const EnvelopeInputIcon = (direction, hasError) => <Bulma.Icon icon={"envelope"} direction={direction} danger={hasError}/>;
 const GlobeInputIcon = (direction, hasError) => <Bulma.Icon icon={"globe"} direction={direction} danger={hasError}/>;
