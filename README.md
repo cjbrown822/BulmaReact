@@ -3,7 +3,7 @@
 [![BCH compliance](https://bettercodehub.com/edge/badge/cjbrown822/bulma-react?branch=master)](https://bettercodehub.com/)
 
 ```javascript
-npm install bulma-react -S
+npm install @cjbrown822/bulma-react -S
 ```
 
 In your code add

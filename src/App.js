@@ -1,9 +1,9 @@
 import React from 'react';
-import Bulma from "./components/all";
+import Bulma from "./Bulma/components/all";
 
-import './styles/main.scss';
-import Button, {SubmitButton} from "./components/elements/button";
-import Constants from "./utils/constants";
+import './Bulma/styles/main.scss';
+import Button, {SubmitButton} from "./Bulma/components/elements/button";
+import Constants from "./Bulma/utils/constants";
 
 const EnvelopeInputIcon = (direction, hasError) => <Bulma.Icon icon={"envelope"} direction={direction} danger={hasError}/>;
 const GlobeInputIcon = (direction, hasError) => <Bulma.Icon icon={"globe"} direction={direction} danger={hasError}/>;
@@ -19,7 +19,7 @@ function App() {
             <Bulma.Container>
                 <Bulma.Section>
                     <Bulma.Columns>
-                        <Bulma.Column columnSizeModifier={[{offset: true,size: Constants.Columns.Sizes.Half}]}>
+                        <Bulma.Column columnSizeModifier={[{size: Constants.Columns.Sizes.OneQuarter}]}>
                             <Bulma.Form style={{maxWidth:'800px'}}>
                                 <Bulma.Field horizontal>
                                     <Bulma.Input name={"FirstName"} placeholder={"First name"} required rightIcon={AstrickInputIcon}/>
@@ -64,15 +64,35 @@ function App() {
                             </Bulma.Form>
                         </Bulma.Column>
                         <Bulma.Column>
-                            Lucas ipsum dolor sit amet polis rotta artaru crynyd zekk tarkin darth haako kwi ken. Ralter darpa sio sesswenna crynyd endocott bail borsk. Bothan sabé kushiban whaladon terrik organa terentatek cracken. Mod hutt dressellian utapaun. Kir zekk paaerduag marek sykes felucia lars teevan kendal. Djo wilhuff arkanis rishii raioballo wesell utai. Dug melodie toydarian anakin bothan biggs calamari. Neimoidia garm darth vivenda phlog zeltron. Muzzer ferroans khai clawdite kobok letaki. Motti elrood isard ruurian gwurran nadon dooku.
-
-                            San jade kohl sifo-dyas gonk hapan mandalorians. Skywalker tenel skywalker sly elrood derlin wedge darth til. Hissa antonio sio tion tiin firrerreo zam habassa gado. Cerean nar hapan rahn moddell vau ogemite sola kurtzen. Nagai cassio weequay calrissian logray meridian r4-p17. Ubb jek tharin naboo klivian whill. Paploo gavyn nar skakoan tion. Monkey-lizard biggs iv melodie aurra. Kel jettster fey'lya falleen nautolan hoojib caamasi skywalker. Yowza iv fett iktotchi zabrak yoda kubaz til. Galen terrik gamorr skywalker aleena gotal.
-
-                            Gorax kiffar jeremoch plo jawa aqualish gorith. Sebulba ysanne jabba iridonian lowbacca dug x1 gand. Kamino r2-d2 kowakian darth tenel. Tib caamasi rieekan t88 c-3po. Naboo ablajeck antonio veers wirutid iktotchi y'bith bane darklighter. Lah y'bith alderaan vima-da-boda felth nilgaard chommell nautolan leia. Auril porkins soontir zekk lepi b'omarr. Vor fett ailyn mandell allana. Gamorrean alderaan ti meridian gungan. Quinlan kit kyle ventress trandoshan abrion even darth amidala. Terrik skywalker chewbacca lars boz qui-gon wuher airen.
-
-                            Calrissian biggs isard ponda. Lars kurtzen melodie gizka soontir calamari kel gunray. Ssi-ruuk yowza meridian solo clawdite thisspiasian. Jettster maximilian r4-p17 roonan reach skywalker. Lars darth kaminoan sulorine. Ryn jamillia raynar antemeridian kel. Pellaeon wuher amanin irek dodonna duro mod. Tof kamino ferroans toydarian. Thakwaash yoda gilad illum rex vao kamino. Defel adi davin altyr durron fey'lya. Gungan vader kit zam darklighter besalisk. Moff ree-yees hissa mirialan beru billaba anakin amidala aruzan.
-
-                            Bertroff yaddle anx quarren su tarasin derlin ackbar dagobah. Fett jek carondian lahara kota. Triclops klatooinian sal-solo hapan vaathkree raymus trioculus. Wicket iv wyl sulorine sneevel dantari frozarns. Mygeeto marek senex bib braxant ki-adi-mundi darth piell. Cal tiin yoda tagge vao greeata nadd. Psadan lando anx kal kalee fode. Rieekan iridonian gunray gerb dulok gunray lowbacca. Joruus ithorian amidala calamari nal chiss ahsoka kasan. Bren naberrie fel ziro jeremoch. Kobok wicket durron luuke falleen jubnuk kashyyyk soontir colton.
+                            <Bulma.Tile ancestor>
+                                <Bulma.Tile parent>
+                                    <Bulma.Tile parent>
+                                        <Bulma.Tile child notification primary>
+                                            <h1 className={"title"}>Star Wars</h1>
+                                            <h5 className={"subtitle"}>Insum</h5>
+                                            Gorax kiffar jeremoch plo jawa aqualish gorith. Sebulba ysanne jabba iridonian lowbacca dug x1 gand. Kamino r2-d2 kowakian darth tenel. Tib caamasi rieekan t88 c-3po. Naboo ablajeck antonio veers wirutid iktotchi y'bith bane darklighter. Lah y'bith alderaan vima-da-boda felth nilgaard chommell nautolan leia. Auril porkins soontir zekk lepi b'omarr. Vor fett ailyn mandell allana. Gamorrean alderaan ti meridian gungan. Quinlan kit kyle ventress trandoshan abrion even darth amidala. Terrik skywalker chewbacca lars boz qui-gon wuher airen.
+                                            Calrissian biggs isard ponda. Lars kurtzen melodie gizka soontir calamari kel gunray. Ssi-ruuk yowza meridian solo clawdite thisspiasian. Jettster maximilian r4-p17 roonan reach skywalker. Lars darth kaminoan sulorine. Ryn jamillia raynar antemeridian kel. Pellaeon wuher amanin irek dodonna duro mod. Tof kamino ferroans toydarian. Thakwaash yoda gilad illum rex vao kamino. Defel adi davin altyr durron fey'lya. Gungan vader kit zam darklighter besalisk. Moff ree-yees hissa mirialan beru billaba anakin amidala aruzan.
+                                            Bertroff yaddle anx quarren su tarasin derlin ackbar dagobah. Fett jek carondian lahara kota. Triclops klatooinian sal-solo hapan vaathkree raymus trioculus. Wicket iv wyl sulorine sneevel dantari frozarns. Mygeeto marek senex bib braxant ki-adi-mundi darth piell. Cal tiin yoda tagge vao greeata nadd. Psadan lando anx kal kalee fode. Rieekan iridonian gunray gerb dulok gunray lowbacca. Joruus ithorian amidala calamari nal chiss ahsoka kasan. Bren naberrie fel ziro jeremoch. Kobok wicket durron luuke falleen jubnuk kashyyyk soontir colton.
+                                        </Bulma.Tile>
+                                    </Bulma.Tile>
+                                    <Bulma.Tile parent size={4} box>
+                                        <Bulma.Tile child>
+                                            <div className={"content"}>
+                                                <p>Lucas ipsum dolor sit amet polis rotta artaru crynyd zekk tarkin darth haako kwi ken. Ralter darpa sio sesswenna crynyd endocott bail borsk. Bothan sabé kushiban whaladon terrik organa terentatek cracken. Mod hutt dressellian utapaun. Kir zekk paaerduag marek sykes felucia lars teevan kendal. Djo wilhuff arkanis rishii raioballo wesell utai. Dug melodie toydarian anakin bothan biggs calamari. Neimoidia garm darth vivenda phlog zeltron. Muzzer ferroans khai clawdite kobok letaki. Motti elrood isard ruurian gwurran nadon dooku</p>
+                                                <Bulma.Tile parent>
+                                                    <Bulma.Tile child notification danger>
+                                                        <div className={"content"}>
+                                                            <p>
+                                                                San jade kohl sifo-dyas gonk hapan mandalorians. Skywalker tenel skywalker sly elrood derlin wedge darth til. Hissa antonio sio tion tiin firrerreo zam habassa gado. Cerean nar hapan rahn moddell vau ogemite sola kurtzen. Nagai cassio weequay calrissian logray meridian r4-p17. Ubb jek tharin naboo klivian whill. Paploo gavyn nar skakoan tion. Monkey-lizard biggs iv melodie aurra. Kel jettster fey'lya falleen nautolan hoojib caamasi skywalker. Yowza iv fett iktotchi zabrak yoda kubaz til. Galen terrik gamorr skywalker aleena gotal.
+                                                            </p>
+                                                        </div>
+                                                    </Bulma.Tile>
+                                                </Bulma.Tile>
+                                            </div>
+                                        </Bulma.Tile>
+                                    </Bulma.Tile>
+                                </Bulma.Tile>
+                            </Bulma.Tile>
                         </Bulma.Column>
                     </Bulma.Columns>
                 </Bulma.Section>

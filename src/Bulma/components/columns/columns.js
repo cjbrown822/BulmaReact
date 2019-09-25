@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import withModifiers, {withNarrow, withDevice, withGap, withOptions} from "../forms/columnhoc";
+import withModifiers, {withNarrow, withDevice, withGap, withOptions} from "../higherorder/columnhoc";
 
 import PropTypes from "prop-types";
 

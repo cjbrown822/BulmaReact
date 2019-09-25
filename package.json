@@ -1,9 +1,18 @@
 {
-  "name": "bulma-react",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@cjbrown822/bulma-react",
+  "version": "1.0.1",
+  "private": false,
+  "author": "Chris Brown",
+  "license": "MIT",
   "dependencies": {
     "bulma": "^0.7.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cjbrown822/bulma-react.git"
+  },
+  "babel": {
+    "presets": ["@babel/react"]
   },
   "scripts": {
     "start": "react-scripts start",
@@ -11,7 +20,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "publish:npm": "SET NODE_ENV=production && npx babel src/Bulma --out-dir dist --copy-files"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -29,6 +39,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
     "@fortawesome/fontawesome-free": "^5.10.1",
     "@storybook/addon-actions": "^5.1.10",
     "@storybook/addon-links": "^5.1.10",
