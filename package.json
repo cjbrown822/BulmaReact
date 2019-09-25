@@ -4,6 +4,7 @@
   "private": false,
   "author": "Chris Brown",
   "license": "MIT",
+  "main": "index.js",
   "dependencies": {
     "bulma": "^0.7.5"
   },
