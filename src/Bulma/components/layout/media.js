@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Content from "./content";
+import Content from "../elements/content";
 
 const Media = styled.article.attrs(props => ({
 	className: "media"

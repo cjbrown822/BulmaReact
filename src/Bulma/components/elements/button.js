@@ -19,4 +19,4 @@ export const SubmitButton = props => {
 
 export const ResetButton = props => <Button type={"reset"} {...props}/>;
 
-export default Button;
+export default withSize(Button);

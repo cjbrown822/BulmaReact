@@ -4,6 +4,7 @@ import Bulma from "./components/all";
 import './styles/main.scss';
 import Button, {SubmitButton} from "./components/elements/button";
 import Constants from "./utils/constants";
+import Box from "./components/elements/box";
 
 const EnvelopeInputIcon = (direction, hasError) => <Bulma.Icon icon={"envelope"} direction={direction} danger={hasError}/>;
 const GlobeInputIcon = (direction, hasError) => <Bulma.Icon icon={"globe"} direction={direction} danger={hasError}/>;
@@ -17,6 +18,14 @@ function App() {
         </Bulma.HeroHeader>
         <Bulma.HeroBody>
             <Bulma.Container>
+                <Bulma.Notification primary>
+                    <Bulma.Delete></Bulma.Delete>
+                    <Bulma.OrderedList is={"lower-roman"}>
+                        <span>Make friends</span>
+                        <span>Make money</span>
+                    </Bulma.OrderedList>
+                    <Bulma.ProgressBar max={100} info is={"large"} value={15}/>
+                </Bulma.Notification>
                 <Bulma.Section>
                     <Bulma.Columns>
                         <Bulma.Column columnSizeModifier={[{size: Constants.Columns.Sizes.OneQuarter}]}>
@@ -99,7 +108,7 @@ function App() {
             </Bulma.Container>
         </Bulma.HeroBody>
         <Bulma.HeroFooter>
-            <p>Footer</p>
+            Some stuff
         </Bulma.HeroFooter>
     </Bulma.Hero>
   );

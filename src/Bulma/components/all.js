@@ -17,6 +17,11 @@ import Radio from "./forms/radio";
 import Button, { SubmitButton, ResetButton} from "./elements/button";
 import Tile from "./layout/tile";
 import { Columns, Column } from "./columns/columns";
+import Box from "./elements/box";
+import Content, { OrderedList } from "./elements/content";
+import Delete from "./layout/delete";
+import Notification from "./elements/notification";
+import ProgressBar from "./elements/progressbar";
 
 
 const Bulma = {
@@ -50,7 +55,13 @@ const Bulma = {
 	ResetButton,
 	Columns,
 	Column,
-	Tile
+	Tile,
+	Box,
+	Content,
+	OrderedList,
+	Delete,
+	Notification,
+	ProgressBar
 };
 
 export default Bulma;
