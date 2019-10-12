@@ -34,7 +34,21 @@ function App() {
     is: "fullheight"
   }, React.createElement(Bulma.HeroHeader, null, React.createElement("p", {
     className: "title"
-  }, "Header")), React.createElement(Bulma.HeroBody, null, React.createElement(Bulma.Container, null, React.createElement(Bulma.Section, null, React.createElement(Bulma.Columns, null, React.createElement(Bulma.Column, {
+  }, "Header")), React.createElement(Bulma.HeroBody, null, React.createElement(Bulma.Container, null, React.createElement(Bulma.Notification, {
+    warning: true
+  }, React.createElement(Bulma.Tag, {
+    primary: true,
+    is: ["large", "rounded"]
+  }, "Hot stuff", React.createElement(Bulma.Delete, null)), React.createElement(Bulma.Delete, null), React.createElement(Bulma.OrderedList, {
+    is: "lower-roman"
+  }, React.createElement("span", null, "Make friends"), React.createElement("span", null, "Make money")), React.createElement(Bulma.ProgressBar, {
+    max: 100,
+    info: true,
+    is: "large",
+    value: 15
+  })), React.createElement(Bulma.Section, null, React.createElement(Bulma.Table, {
+    is: ["fullwidth", "hoverable", "striped"]
+  }, React.createElement(Bulma.TableHeader, null, React.createElement(Bulma.TableRow, null, React.createElement(Bulma.TableCellHeading, null, "1"), React.createElement(Bulma.TableCellHeading, null, "2"), React.createElement(Bulma.TableCellHeading, null, "3"))), React.createElement(Bulma.TableFooter, null, React.createElement(Bulma.TableRow, null, React.createElement(Bulma.TableCellHeading, null, "1"), React.createElement(Bulma.TableCellHeading, null, "2"), React.createElement(Bulma.TableCellHeading, null, "3"))), React.createElement(Bulma.TableBody, null, React.createElement(Bulma.TableRow, null, React.createElement(Bulma.TableCell, null, "1"), React.createElement(Bulma.TableCell, null, "2"), React.createElement(Bulma.TableCell, null, "3")), React.createElement(Bulma.TableRow, null, React.createElement(Bulma.TableCell, null, "1"), React.createElement(Bulma.TableCell, null, "2"), React.createElement(Bulma.TableCell, null, "3")), React.createElement(Bulma.TableRow, null, React.createElement(Bulma.TableCell, null, "1"), React.createElement(Bulma.TableCell, null, "2"), React.createElement(Bulma.TableCell, null, "3"))))), React.createElement(Bulma.Section, null, React.createElement(Bulma.Columns, null, React.createElement(Bulma.Column, {
     columnSizeModifier: [{
       size: Constants.Columns.Sizes.OneQuarter
     }]
@@ -134,7 +148,7 @@ function App() {
     danger: true
   }, React.createElement("div", {
     className: "content"
-  }, React.createElement("p", null, "San jade kohl sifo-dyas gonk hapan mandalorians. Skywalker tenel skywalker sly elrood derlin wedge darth til. Hissa antonio sio tion tiin firrerreo zam habassa gado. Cerean nar hapan rahn moddell vau ogemite sola kurtzen. Nagai cassio weequay calrissian logray meridian r4-p17. Ubb jek tharin naboo klivian whill. Paploo gavyn nar skakoan tion. Monkey-lizard biggs iv melodie aurra. Kel jettster fey'lya falleen nautolan hoojib caamasi skywalker. Yowza iv fett iktotchi zabrak yoda kubaz til. Galen terrik gamorr skywalker aleena gotal.")))))))))))))), React.createElement(Bulma.HeroFooter, null, React.createElement("p", null, "Footer")));
+  }, React.createElement("p", null, "San jade kohl sifo-dyas gonk hapan mandalorians. Skywalker tenel skywalker sly elrood derlin wedge darth til. Hissa antonio sio tion tiin firrerreo zam habassa gado. Cerean nar hapan rahn moddell vau ogemite sola kurtzen. Nagai cassio weequay calrissian logray meridian r4-p17. Ubb jek tharin naboo klivian whill. Paploo gavyn nar skakoan tion. Monkey-lizard biggs iv melodie aurra. Kel jettster fey'lya falleen nautolan hoojib caamasi skywalker. Yowza iv fett iktotchi zabrak yoda kubaz til. Galen terrik gamorr skywalker aleena gotal.")))))))))))))), React.createElement(Bulma.HeroFooter, null, "Some stuff"));
 }
 
 export default App;

@@ -26,4 +26,4 @@ export const SubmitButton = props => {
 export const ResetButton = props => React.createElement(Button, _extends({
   type: "reset"
 }, props));
-export default Button;
+export default withSize(Button);
