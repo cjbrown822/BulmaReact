@@ -22,6 +22,8 @@ import Content, { OrderedList } from "./elements/content";
 import Delete from "./layout/delete";
 import Notification from "./elements/notification";
 import ProgressBar from "./elements/progressbar";
+import Table, { TableContainer, TableCell, TableCellHeading, TableFooter, TableHeader, TableRow, TableBody } from "./elements/table";
+import Tag from "./elements/tag";
 
 
 const Bulma = {
@@ -61,7 +63,16 @@ const Bulma = {
 	OrderedList,
 	Delete,
 	Notification,
-	ProgressBar
+	ProgressBar,
+	Table,
+	TableContainer,
+	TableFooter,
+	TableHeader,
+	TableCellHeading,
+	TableCell,
+	TableRow,
+	TableBody,
+	Tag
 };
 
 export default Bulma;

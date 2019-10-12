@@ -4,12 +4,12 @@ import Bulma from "./components/all";
 import './styles/main.scss';
 import Button, {SubmitButton} from "./components/elements/button";
 import Constants from "./utils/constants";
-import Box from "./components/elements/box";
 
 const EnvelopeInputIcon = (direction, hasError) => <Bulma.Icon icon={"envelope"} direction={direction} danger={hasError}/>;
 const GlobeInputIcon = (direction, hasError) => <Bulma.Icon icon={"globe"} direction={direction} danger={hasError}/>;
 const LockInputIcon = (direction, hasError) => <Bulma.Icon icon={"lock"} direction={direction} danger={hasError}/>;
 const AstrickInputIcon = (direction, hasError) => <Bulma.Icon icon={"asterisk"} direction={direction} danger={hasError} is={"small"}/>;
+
 function App() {
   return (
     <Bulma.Hero is={"fullheight"}>
@@ -18,14 +18,50 @@ function App() {
         </Bulma.HeroHeader>
         <Bulma.HeroBody>
             <Bulma.Container>
-                <Bulma.Notification primary>
-                    <Bulma.Delete></Bulma.Delete>
+                <Bulma.Notification warning>
+                    <Bulma.Tag primary is={["large","rounded"]}>Hot stuff<Bulma.Delete/></Bulma.Tag>
+                    <Bulma.Delete/>
                     <Bulma.OrderedList is={"lower-roman"}>
                         <span>Make friends</span>
                         <span>Make money</span>
                     </Bulma.OrderedList>
                     <Bulma.ProgressBar max={100} info is={"large"} value={15}/>
                 </Bulma.Notification>
+                <Bulma.Section>
+                    <Bulma.Table is={["fullwidth","hoverable", "striped"]}>
+                        <Bulma.TableHeader>
+                            <Bulma.TableRow>
+                                <Bulma.TableCellHeading>1</Bulma.TableCellHeading>
+                                <Bulma.TableCellHeading>2</Bulma.TableCellHeading>
+                                <Bulma.TableCellHeading>3</Bulma.TableCellHeading>
+                            </Bulma.TableRow>
+                        </Bulma.TableHeader>
+                        <Bulma.TableFooter>
+                            <Bulma.TableRow>
+                                <Bulma.TableCellHeading>1</Bulma.TableCellHeading>
+                                <Bulma.TableCellHeading>2</Bulma.TableCellHeading>
+                                <Bulma.TableCellHeading>3</Bulma.TableCellHeading>
+                            </Bulma.TableRow>
+                        </Bulma.TableFooter>
+                        <Bulma.TableBody>
+                            <Bulma.TableRow>
+                                <Bulma.TableCell>1</Bulma.TableCell>
+                                <Bulma.TableCell>2</Bulma.TableCell>
+                                <Bulma.TableCell>3</Bulma.TableCell>
+                            </Bulma.TableRow>
+                            <Bulma.TableRow>
+                                <Bulma.TableCell>1</Bulma.TableCell>
+                                <Bulma.TableCell>2</Bulma.TableCell>
+                                <Bulma.TableCell>3</Bulma.TableCell>
+                            </Bulma.TableRow>
+                            <Bulma.TableRow>
+                                <Bulma.TableCell>1</Bulma.TableCell>
+                                <Bulma.TableCell>2</Bulma.TableCell>
+                                <Bulma.TableCell>3</Bulma.TableCell>
+                            </Bulma.TableRow>
+                        </Bulma.TableBody>
+                    </Bulma.Table>
+                </Bulma.Section>
                 <Bulma.Section>
                     <Bulma.Columns>
                         <Bulma.Column columnSizeModifier={[{size: Constants.Columns.Sizes.OneQuarter}]}>
