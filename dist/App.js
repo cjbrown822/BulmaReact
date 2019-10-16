@@ -32,9 +32,11 @@ const AstrickInputIcon = (direction, hasError) => React.createElement(Bulma.Icon
 function App() {
   return React.createElement(Bulma.Hero, {
     is: "fullheight"
-  }, React.createElement(Bulma.HeroHeader, null, React.createElement("p", {
-    className: "title"
-  }, "Header")), React.createElement(Bulma.HeroBody, null, React.createElement(Bulma.Container, null, React.createElement(Bulma.Notification, {
+  }, React.createElement(Bulma.HeroHeader, null, React.createElement(Bulma.Container, null, React.createElement(Bulma.Title.h1, {
+    is: "3"
+  }, "My Title"), React.createElement(Bulma.Subtitle.h3, {
+    is: "5"
+  }, "My subtitle"))), React.createElement(Bulma.HeroBody, null, React.createElement(Bulma.Container, null, React.createElement(Bulma.Notification, {
     warning: true
   }, React.createElement(Bulma.Tag, {
     primary: true,
@@ -148,7 +150,7 @@ function App() {
     danger: true
   }, React.createElement("div", {
     className: "content"
-  }, React.createElement("p", null, "San jade kohl sifo-dyas gonk hapan mandalorians. Skywalker tenel skywalker sly elrood derlin wedge darth til. Hissa antonio sio tion tiin firrerreo zam habassa gado. Cerean nar hapan rahn moddell vau ogemite sola kurtzen. Nagai cassio weequay calrissian logray meridian r4-p17. Ubb jek tharin naboo klivian whill. Paploo gavyn nar skakoan tion. Monkey-lizard biggs iv melodie aurra. Kel jettster fey'lya falleen nautolan hoojib caamasi skywalker. Yowza iv fett iktotchi zabrak yoda kubaz til. Galen terrik gamorr skywalker aleena gotal.")))))))))))))), React.createElement(Bulma.HeroFooter, null, "Some stuff"));
+  }, React.createElement("p", null, "San jade kohl sifo-dyas gonk hapan mandalorians. Skywalker tenel skywalker sly elrood derlin wedge darth til. Hissa antonio sio tion tiin firrerreo zam habassa gado. Cerean nar hapan rahn moddell vau ogemite sola kurtzen. Nagai cassio weequay calrissian logray meridian r4-p17. Ubb jek tharin naboo klivian whill. Paploo gavyn nar skakoan tion. Monkey-lizard biggs iv melodie aurra. Kel jettster fey'lya falleen nautolan hoojib caamasi skywalker. Yowza iv fett iktotchi zabrak yoda kubaz til. Galen terrik gamorr skywalker aleena gotal.")))))))))))))), React.createElement(Bulma.HeroFooter, null));
 }
 
 export default App;

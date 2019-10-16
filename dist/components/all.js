@@ -19,11 +19,13 @@ import Tile from "./layout/tile";
 import { Columns, Column } from "./columns/columns";
 import Box from "./elements/box";
 import Content, { OrderedList } from "./elements/content";
-import Delete from "./layout/delete";
+import Delete from "./elements/delete";
 import Notification from "./elements/notification";
 import ProgressBar from "./elements/progressbar";
 import Table, { TableContainer, TableCell, TableCellHeading, TableFooter, TableHeader, TableRow, TableBody } from "./elements/table";
 import Tag from "./elements/tag";
+import Title from "./elements/title";
+import Subtitle from "./elements/subtitle";
 const Bulma = {
   Container,
   Level,
@@ -70,6 +72,8 @@ const Bulma = {
   TableCell,
   TableRow,
   TableBody,
-  Tag
+  Tag,
+  Title,
+  Subtitle
 };
 export default Bulma;

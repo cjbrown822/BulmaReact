@@ -14,7 +14,14 @@ function App() {
   return (
     <Bulma.Hero is={"fullheight"}>
         <Bulma.HeroHeader>
-            <p className={"title"}>Header</p>
+            <Bulma.Container>
+                <Bulma.Title.h1 is={"3"}>
+                    My Title
+                </Bulma.Title.h1>
+                <Bulma.Subtitle.h3 is={"5"}>
+                    My subtitle
+                </Bulma.Subtitle.h3>
+            </Bulma.Container>
         </Bulma.HeroHeader>
         <Bulma.HeroBody>
             <Bulma.Container>
@@ -144,7 +151,7 @@ function App() {
             </Bulma.Container>
         </Bulma.HeroBody>
         <Bulma.HeroFooter>
-            Some stuff
+
         </Bulma.HeroFooter>
     </Bulma.Hero>
   );
