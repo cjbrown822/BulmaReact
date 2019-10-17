@@ -28,6 +28,10 @@ import  Title  from "./elements/title";
 import Subtitle from "./elements/subtitle";
 import BreadCrumb, { BreadCrumbItem } from "./items/breadcrumb";
 import Card, { CardContent, CardHeader, CardHeaderTitle, CardHeaderIcon, CardFooter, CardFooterItem } from "./items/card";
+import DropDown, { DropDownItem, DropDownDivider } from "./items/dropdown";
+import Menu, { MenuLabel, MenuList, MenuSubList, MenuListItem } from "./items/menu";
+import Message, { MessageHeader, MessageBody } from "./items/message";
+import Modal, { ModalCard, ModalCardBody, ModalCardFooter, ModalCardHeader} from "./items/modal";
 
 
 const Bulma = {
@@ -87,7 +91,23 @@ const Bulma = {
 	CardHeaderTitle,
 	CardHeaderIcon,
 	CardFooter,
-	CardFooterItem
+	CardFooterItem,
+	DropDown,
+	DropDownItem,
+	DropDownDivider,
+	Menu,
+	MenuLabel,
+	MenuList,
+	MenuSubList,
+	MenuListItem,
+	Message,
+	MessageHeader,
+	MessageBody,
+	Modal,
+	ModalCard,
+	ModalCardHeader,
+	ModalCardFooter,
+	ModalCardBody
 };
 
 export default Bulma;

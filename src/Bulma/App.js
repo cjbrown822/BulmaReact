@@ -13,6 +13,14 @@ const AstrickInputIcon = (direction, hasError) => <Bulma.Icon icon={"asterisk"} 
 function App() {
   return (
     <Bulma.Hero is={"fullheight"}>
+        <Bulma.Modal>
+            <Bulma.Box>
+                <Bulma.OrderedList is={"lower-roman"}>
+                    <span>Make friends</span>
+                    <span>Make money</span>
+                </Bulma.OrderedList>
+            </Bulma.Box>
+        </Bulma.Modal>
         <Bulma.HeroHeader>
             <Bulma.Container>
                 <Bulma.Title.h1 is={"3"}>
@@ -25,6 +33,17 @@ function App() {
         </Bulma.HeroHeader>
         <Bulma.HeroBody>
             <Bulma.Container>
+                <Bulma.Message>
+                    <Bulma.MessageHeader title={"My Message"}/>
+                    <Bulma.MessageBody>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                    </Bulma.MessageBody>
+                </Bulma.Message>
+                <Bulma.Message primary>
+                    <Bulma.MessageBody>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                    </Bulma.MessageBody>
+                </Bulma.Message>
                 <Bulma.BreadCrumb  >
                     <Bulma.BreadCrumbItem>
                         Home
@@ -39,10 +58,6 @@ function App() {
                 <Bulma.Notification warning>
                     <Bulma.Tag primary is={["large","rounded"]}>Hot stuff<Bulma.Delete/></Bulma.Tag>
                     <Bulma.Delete/>
-                    <Bulma.OrderedList is={"lower-roman"}>
-                        <span>Make friends</span>
-                        <span>Make money</span>
-                    </Bulma.OrderedList>
                     <Bulma.ProgressBar max={100} info is={"large"} value={15}/>
                 </Bulma.Notification>
                 <Bulma.Section>
@@ -131,6 +146,14 @@ function App() {
                                 <Bulma.Tile parent>
                                     <Bulma.Tile parent>
                                         <Bulma.Tile child notification primary>
+                                            <Bulma.DropDown text={"Example"} is={["hoverable","up","right"]}>
+                                                <Bulma.DropDownItem href={"#"}>
+                                                    First
+                                                </Bulma.DropDownItem>
+                                                <Bulma.DropDownItem href={"#"}>
+                                                    Second
+                                                </Bulma.DropDownItem>
+                                            </Bulma.DropDown>
                                             <h1 className={"title"}>Star Wars</h1>
                                             <h5 className={"subtitle"}>Insum</h5>
                                             Gorax kiffar jeremoch plo jawa aqualish gorith. Sebulba ysanne jabba iridonian lowbacca dug x1 gand. Kamino r2-d2 kowakian darth tenel. Tib caamasi rieekan t88 c-3po. Naboo ablajeck antonio veers wirutid iktotchi y'bith bane darklighter. Lah y'bith alderaan vima-da-boda felth nilgaard chommell nautolan leia. Auril porkins soontir zekk lepi b'omarr. Vor fett ailyn mandell allana. Gamorrean alderaan ti meridian gungan. Quinlan kit kyle ventress trandoshan abrion even darth amidala. Terrik skywalker chewbacca lars boz qui-gon wuher airen.
@@ -172,7 +195,39 @@ function App() {
             </Bulma.Container>
         </Bulma.HeroBody>
         <Bulma.HeroFooter>
-
+            <Bulma.Container>
+                <Bulma.Column>
+                    <Bulma.Column columnSizeModifier={[{size: Bulma.Constants.Columns.Sizes.OneQuarter}]}>
+                        <Bulma.Menu>
+                            <Bulma.MenuLabel>
+                                My Menu Label
+                            </Bulma.MenuLabel>
+                            <Bulma.MenuList>
+                                <Bulma.MenuListItem>
+                                    First
+                                </Bulma.MenuListItem>
+                                <Bulma.MenuListItem>
+                                    Second
+                                </Bulma.MenuListItem>
+                                <Bulma.MenuListItem>
+                                    Third
+                                </Bulma.MenuListItem>
+                                <Bulma.MenuSubList label={"Sub menu list"} is={"active"}>
+                                    <Bulma.MenuListItem>
+                                        Third
+                                    </Bulma.MenuListItem>
+                                    <Bulma.MenuListItem>
+                                        Third
+                                    </Bulma.MenuListItem>
+                                    <Bulma.MenuListItem>
+                                        Third
+                                    </Bulma.MenuListItem>
+                                </Bulma.MenuSubList>
+                            </Bulma.MenuList>
+                        </Bulma.Menu>
+                    </Bulma.Column>
+                </Bulma.Column>
+            </Bulma.Container>
         </Bulma.HeroFooter>
     </Bulma.Hero>
   );
