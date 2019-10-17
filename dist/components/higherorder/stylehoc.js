@@ -8,10 +8,11 @@ export const withStyle = WrappedComponent => props => {
     warning,
     success,
     info,
+    dark,
     ...rest
   } = props;
   let forwardedStyle = "";
-  if (primary) forwardedStyle = "primary";else if (danger) forwardedStyle = "danger";else if (warning) forwardedStyle = "warning";else if (success) forwardedStyle = "success";else if (info) forwardedStyle = "info";
+  if (primary) forwardedStyle = "primary";else if (danger) forwardedStyle = "danger";else if (warning) forwardedStyle = "warning";else if (success) forwardedStyle = "success";else if (info) forwardedStyle = "info";else if (dark) forwardedStyle = "dark";
   return React.createElement(WrappedComponent, _extends({
     styleName: forwardedStyle
   }, rest));

@@ -32,20 +32,24 @@ const AstrickInputIcon = (direction, hasError) => React.createElement(Bulma.Icon
 function App() {
   return React.createElement(Bulma.Hero, {
     is: "fullheight"
-  }, React.createElement(Bulma.HeroHeader, null, React.createElement(Bulma.Container, null, React.createElement(Bulma.Title.h1, {
+  }, React.createElement(Bulma.Modal, null, React.createElement(Bulma.Box, null, React.createElement(Bulma.OrderedList, {
+    is: "lower-roman"
+  }, React.createElement("span", null, "Make friends"), React.createElement("span", null, "Make money")))), React.createElement(Bulma.HeroHeader, null, React.createElement(Bulma.Container, null, React.createElement(Bulma.Title.h1, {
     is: "3"
   }, "My Title"), React.createElement(Bulma.Subtitle.h3, {
     is: "5"
-  }, "My subtitle"))), React.createElement(Bulma.HeroBody, null, React.createElement(Bulma.Container, null, React.createElement(Bulma.BreadCrumb, null, React.createElement(Bulma.BreadCrumbItem, null, "Home"), React.createElement(Bulma.BreadCrumbItem, null, "Next"), React.createElement(Bulma.BreadCrumbItem, {
+  }, "My subtitle"))), React.createElement(Bulma.HeroBody, null, React.createElement(Bulma.Container, null, React.createElement(Bulma.Message, null, React.createElement(Bulma.MessageHeader, {
+    title: "My Message"
+  }), React.createElement(Bulma.MessageBody, null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ", React.createElement("strong", null, "Pellentesque risus mi"), ", tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum ", React.createElement("a", null, "felis venenatis"), " efficitur. Aenean ac ", React.createElement("em", null, "eleifend lacus"), ", in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.")), React.createElement(Bulma.Message, {
+    primary: true
+  }, React.createElement(Bulma.MessageBody, null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ", React.createElement("strong", null, "Pellentesque risus mi"), ", tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum ", React.createElement("a", null, "felis venenatis"), " efficitur. Aenean ac ", React.createElement("em", null, "eleifend lacus"), ", in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.")), React.createElement(Bulma.BreadCrumb, null, React.createElement(Bulma.BreadCrumbItem, null, "Home"), React.createElement(Bulma.BreadCrumbItem, null, "Next"), React.createElement(Bulma.BreadCrumbItem, {
     active: true
   }, "Mine")), React.createElement(Bulma.Notification, {
     warning: true
   }, React.createElement(Bulma.Tag, {
     primary: true,
     is: ["large", "rounded"]
-  }, "Hot stuff", React.createElement(Bulma.Delete, null)), React.createElement(Bulma.Delete, null), React.createElement(Bulma.OrderedList, {
-    is: "lower-roman"
-  }, React.createElement("span", null, "Make friends"), React.createElement("span", null, "Make money")), React.createElement(Bulma.ProgressBar, {
+  }, "Hot stuff", React.createElement(Bulma.Delete, null)), React.createElement(Bulma.Delete, null), React.createElement(Bulma.ProgressBar, {
     max: 100,
     info: true,
     is: "large",
@@ -132,7 +136,14 @@ function App() {
     child: true,
     notification: true,
     primary: true
-  }, React.createElement("h1", {
+  }, React.createElement(Bulma.DropDown, {
+    text: "Example",
+    is: ["hoverable", "up", "right"]
+  }, React.createElement(Bulma.DropDownItem, {
+    href: "#"
+  }, "First"), React.createElement(Bulma.DropDownItem, {
+    href: "#"
+  }, "Second")), React.createElement("h1", {
     className: "title"
   }, "Star Wars"), React.createElement("h5", {
     className: "subtitle"
@@ -145,7 +156,14 @@ function App() {
     href: "https://twitter.com/codinghorror/status/506010907021828096"
   }, "Twitter"))), React.createElement(Bulma.CardFooterItem, null, React.createElement("span", null, "Share on ", React.createElement("a", {
     href: "#"
-  }, "Facebook")))))))))))))), React.createElement(Bulma.HeroFooter, null));
+  }, "Facebook")))))))))))))), React.createElement(Bulma.HeroFooter, null, React.createElement(Bulma.Container, null, React.createElement(Bulma.Column, null, React.createElement(Bulma.Column, {
+    columnSizeModifier: [{
+      size: Bulma.Constants.Columns.Sizes.OneQuarter
+    }]
+  }, React.createElement(Bulma.Menu, null, React.createElement(Bulma.MenuLabel, null, "My Menu Label"), React.createElement(Bulma.MenuList, null, React.createElement(Bulma.MenuListItem, null, "First"), React.createElement(Bulma.MenuListItem, null, "Second"), React.createElement(Bulma.MenuListItem, null, "Third"), React.createElement(Bulma.MenuSubList, {
+    label: "Sub menu list",
+    is: "active"
+  }, React.createElement(Bulma.MenuListItem, null, "Third"), React.createElement(Bulma.MenuListItem, null, "Third"), React.createElement(Bulma.MenuListItem, null, "Third")))))))));
 }
 
 export default App;
