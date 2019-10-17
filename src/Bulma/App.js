@@ -25,6 +25,17 @@ function App() {
         </Bulma.HeroHeader>
         <Bulma.HeroBody>
             <Bulma.Container>
+                <Bulma.BreadCrumb  >
+                    <Bulma.BreadCrumbItem>
+                        Home
+                    </Bulma.BreadCrumbItem>
+                    <Bulma.BreadCrumbItem>
+                        Next
+                    </Bulma.BreadCrumbItem>
+                    <Bulma.BreadCrumbItem active>
+                        Mine
+                    </Bulma.BreadCrumbItem>
+                </Bulma.BreadCrumb>
                 <Bulma.Notification warning>
                     <Bulma.Tag primary is={["large","rounded"]}>Hot stuff<Bulma.Delete/></Bulma.Tag>
                     <Bulma.Delete/>
@@ -127,20 +138,30 @@ function App() {
                                             Bertroff yaddle anx quarren su tarasin derlin ackbar dagobah. Fett jek carondian lahara kota. Triclops klatooinian sal-solo hapan vaathkree raymus trioculus. Wicket iv wyl sulorine sneevel dantari frozarns. Mygeeto marek senex bib braxant ki-adi-mundi darth piell. Cal tiin yoda tagge vao greeata nadd. Psadan lando anx kal kalee fode. Rieekan iridonian gunray gerb dulok gunray lowbacca. Joruus ithorian amidala calamari nal chiss ahsoka kasan. Bren naberrie fel ziro jeremoch. Kobok wicket durron luuke falleen jubnuk kashyyyk soontir colton.
                                         </Bulma.Tile>
                                     </Bulma.Tile>
-                                    <Bulma.Tile parent size={4} box>
+                                    <Bulma.Tile parent size={4}>
                                         <Bulma.Tile child>
-                                            <div className={"content"}>
-                                                <p>Lucas ipsum dolor sit amet polis rotta artaru crynyd zekk tarkin darth haako kwi ken. Ralter darpa sio sesswenna crynyd endocott bail borsk. Bothan sabé kushiban whaladon terrik organa terentatek cracken. Mod hutt dressellian utapaun. Kir zekk paaerduag marek sykes felucia lars teevan kendal. Djo wilhuff arkanis rishii raioballo wesell utai. Dug melodie toydarian anakin bothan biggs calamari. Neimoidia garm darth vivenda phlog zeltron. Muzzer ferroans khai clawdite kobok letaki. Motti elrood isard ruurian gwurran nadon dooku</p>
-                                                <Bulma.Tile parent>
-                                                    <Bulma.Tile child notification danger>
-                                                        <div className={"content"}>
-                                                            <p>
-                                                                San jade kohl sifo-dyas gonk hapan mandalorians. Skywalker tenel skywalker sly elrood derlin wedge darth til. Hissa antonio sio tion tiin firrerreo zam habassa gado. Cerean nar hapan rahn moddell vau ogemite sola kurtzen. Nagai cassio weequay calrissian logray meridian r4-p17. Ubb jek tharin naboo klivian whill. Paploo gavyn nar skakoan tion. Monkey-lizard biggs iv melodie aurra. Kel jettster fey'lya falleen nautolan hoojib caamasi skywalker. Yowza iv fett iktotchi zabrak yoda kubaz til. Galen terrik gamorr skywalker aleena gotal.
-                                                            </p>
-                                                        </div>
-                                                    </Bulma.Tile>
-                                                </Bulma.Tile>
-                                            </div>
+                                            <Bulma.Card>
+                                                <Bulma.CardContent>
+                                                    <Bulma.Title.h2>
+                                                        “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
+                                                    </Bulma.Title.h2>
+                                                    <Bulma.Subtitle.h3>
+                                                        Jeff Atwood
+                                                    </Bulma.Subtitle.h3>
+                                                </Bulma.CardContent>
+                                                <Bulma.CardFooter>
+                                                    <Bulma.CardFooterItem>
+                                                        <span>
+                                                                View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
+                                                        </span>
+                                                    </Bulma.CardFooterItem>
+                                                    <Bulma.CardFooterItem>
+                                                        <span>
+                                                                Share on <a href="#">Facebook</a>
+                                                        </span>
+                                                    </Bulma.CardFooterItem>
+                                                </Bulma.CardFooter>
+                                            </Bulma.Card>
                                         </Bulma.Tile>
                                     </Bulma.Tile>
                                 </Bulma.Tile>

@@ -26,6 +26,8 @@ import Table, { TableContainer, TableCell, TableCellHeading, TableFooter, TableH
 import Tag from "./elements/tag";
 import  Title  from "./elements/title";
 import Subtitle from "./elements/subtitle";
+import BreadCrumb, { BreadCrumbItem } from "./items/breadcrumb";
+import Card, { CardContent, CardHeader, CardHeaderTitle, CardHeaderIcon, CardFooter, CardFooterItem } from "./items/card";
 
 
 const Bulma = {
@@ -76,7 +78,16 @@ const Bulma = {
 	TableBody,
 	Tag,
 	Title,
-	Subtitle
+	Subtitle,
+	BreadCrumb,
+	BreadCrumbItem,
+	Card,
+	CardHeader,
+	CardContent,
+	CardHeaderTitle,
+	CardHeaderIcon,
+	CardFooter,
+	CardFooterItem
 };
 
 export default Bulma;
