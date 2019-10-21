@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import withSize from "../higherorder/sizehoc";
+import withIs from "../higherorder/sizehoc";
 import Delete from "../elements/delete";
-const ModalWrapper = withSize(styled.div.attrs(({ratio}) => ({
+const ModalWrapper = withIs(styled.div.attrs(({ratio}) => ({
 	className: `modal ${ratio ? `${ratio}` : ''}`
 }))``);
 

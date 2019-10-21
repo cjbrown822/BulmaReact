@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import withSize from "../higherorder/sizehoc";
+import withIs from "../higherorder/sizehoc";
 import Icon from "../elements/icon";
 import Button from "../elements/button";
 
-const DropDownWrapper =withSize(styled.div.attrs(({ratio}) => ({
+const DropDownWrapper =withIs(styled.div.attrs(({ratio}) => ({
 	className: `dropdown ${ratio ? `${ratio}`  : ''}`
 }))``);
 

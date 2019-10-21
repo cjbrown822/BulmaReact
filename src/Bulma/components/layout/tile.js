@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import withTileMod from "../higherorder/tilemodhoc";
-import { withStyle } from "../higherorder/stylehoc";
+import { withThemeColor } from "../higherorder/stylehoc";
 
-const Tile = withStyle(withTileMod(styled.article.attrs(({styled}) => ({
+const Tile = withThemeColor(withTileMod(styled.article.attrs(({styled}) => ({
 	className: styled
 }))``));
 

@@ -1,12 +1,12 @@
 import React, {useEffect, useCallback, useState, useContext, Fragment} from "react";
-import { withStyle } from "../higherorder/stylehoc";
+import { withThemeColor } from "../higherorder/stylehoc";
 import Proptypes from "prop-types";
 import styled from "styled-components";
 import { InputContext } from "../../store/inputcontext";
-import withSize from "../higherorder/sizehoc";
+import withIs from "../higherorder/sizehoc";
 import withValidation from "../higherorder/validationhoc";
 
-const InputCore = withStyle(styled.input.attrs(({ ratio, type, styleName }) => ({
+const InputCore = withThemeColor(styled.input.attrs(({ ratio, type, styleName }) => ({
 	className: `input ${styleName && `is-${styleName}`} ${ratio && ratio}`,
 	type: type
 }))``);
@@ -39,4 +39,4 @@ Input.propTypes = {
 	}))
 };
 
-export default withValidation(withSize(Input));
+export default withValidation(withIs(Input));

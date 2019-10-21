@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { withStyle } from "../higherorder/stylehoc";
+import { withThemeColor } from "../higherorder/stylehoc";
 import withDisplay from "../higherorder/displayhoc";
 import PropTypes from "prop-types";
 
@@ -34,7 +34,7 @@ const FileName = styled.span.attrs(() => ({
 	className: `file-name`
 }))``;
 
-const File = withDisplay(withStyle(({label, icon, name, fileName, right}) => {
+const File = withDisplay(withThemeColor(({label, icon, name, fileName, right}) => {
 	return (
 		<FileWrapper fileName={fileName} right={right}>
 			<FileLabel>

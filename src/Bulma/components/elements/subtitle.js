@@ -1,28 +1,28 @@
 import styled from "styled-components";
-import withSize from "../higherorder/sizehoc";
+import withIs from "../higherorder/sizehoc";
 
-const h1 = withSize(styled.h1.attrs(({ratio}) => ({
+const h1 = withIs(styled.h1.attrs(({ratio}) => ({
 	className: `subtitle ${ratio && ratio}`
 }))``);
-const h2 = withSize(styled.h2.attrs(({ratio}) => ({
+const h2 = withIs(styled.h2.attrs(({ratio}) => ({
 	className: `subtitle ${ratio && ratio}`
 }))``);
-const h3 = withSize(styled.h3.attrs(({ratio}) => ({
+const h3 = withIs(styled.h3.attrs(({ratio}) => ({
 	className: `subtitle ${ratio && ratio}`
 }))``);
-const h4 = withSize(styled.h4.attrs(({ratio}) => ({
+const h4 = withIs(styled.h4.attrs(({ratio}) => ({
 	className: `subtitle ${ratio && ratio}`
 }))``);
-const h5 = withSize(styled.h5.attrs(({ratio}) => ({
+const h5 = withIs(styled.h5.attrs(({ratio}) => ({
 	className: `subtitle ${ratio && ratio}`
 }))``);
 
 const Subtitle = {
-	h1: withSize(h1),
-	h2: withSize(h2),
-	h3: withSize(h3),
-	h4: withSize(h4),
-	h5: withSize(h5)
+	h1: withIs(h1),
+	h2: withIs(h2),
+	h3: withIs(h3),
+	h4: withIs(h4),
+	h5: withIs(h5)
 };
 
 export default Subtitle;

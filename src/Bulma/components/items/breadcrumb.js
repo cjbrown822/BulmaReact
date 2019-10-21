@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import withSize from "../higherorder/sizehoc";
-const BreadCrumbWrapper = withSize(styled.nav.attrs(({ratio, has}) => ({
+import withIs from "../higherorder/sizehoc";
+const BreadCrumbWrapper = withIs(styled.nav.attrs(({ratio, has}) => ({
 	className: `breadcrumb ${ratio && ratio} ${has ? `has-${has}-separator` : ''}`
 }))``);
 

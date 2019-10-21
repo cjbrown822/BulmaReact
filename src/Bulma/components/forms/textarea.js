@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import withSize from "../higherorder/sizehoc";
-import { withStyle} from "../higherorder/stylehoc";
+import withIs from "../higherorder/sizehoc";
+import { withThemeColor} from "../higherorder/stylehoc";
 import withValidation from "../higherorder/validationhoc";
 import PropTypes from "prop-types";
 
@@ -15,4 +15,4 @@ TextArea.propTypes = {
 	name: PropTypes.string.isRequired
 };
 
-export default withValidation(withSize(withStyle(TextArea)));
+export default withValidation(withIs(withThemeColor(TextArea)));

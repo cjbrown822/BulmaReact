@@ -1,11 +1,11 @@
 import React, {Fragment, useContext} from "react";
 import styled from "styled-components";
-import withSize from "../higherorder/sizehoc";
-import { withStyle} from "../higherorder/stylehoc";
+import withIs from "../higherorder/sizehoc";
+import { withThemeColor} from "../higherorder/stylehoc";
 import {InputContext} from "../../store/inputcontext";
 import PropTypes from "prop-types";
 
-const SelectWrapper = withSize(withStyle(styled.div.attrs(({ratio, styleName, multiple, loading}) => ({
+const SelectWrapper = withIs(withThemeColor(styled.div.attrs(({ratio, styleName, multiple, loading}) => ({
 	className: `select ${ratio && `${ratio}`} ${styleName && `is-${styleName}`} ${multiple && `is-multiple`} ${loading && `is-loading`}`
 }))``));
 

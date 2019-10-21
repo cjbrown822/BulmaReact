@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { withStyle } from "../higherorder/stylehoc";
+import { withThemeColor } from "../higherorder/stylehoc";
 
 const FooterWrapper = styled.footer.attrs(({ styleName }) => ({
 	className: `footer ${styleName && `is-${styleName}`}`
@@ -8,4 +8,4 @@ const FooterWrapper = styled.footer.attrs(({ styleName }) => ({
 
 const Footer = ({ styleName, children, ...rest }) => <FooterWrapper styleName={styleName} {...rest}>{children}</FooterWrapper>;
 
-export default withStyle(Footer);
+export default withThemeColor(Footer);

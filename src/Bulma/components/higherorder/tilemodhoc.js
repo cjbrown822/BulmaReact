@@ -1,5 +1,5 @@
 import React from "react";
-import {withStyle} from "./stylehoc";
+import {withThemeColor} from "./stylehoc";
 
 const withTileMod = WrappedComponent => ({ styleName, size, vertical, ancestor, parent, child, notification, box, children, ...rest}) => {
 	let styles = [`tile`];

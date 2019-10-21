@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import withSize from "../higherorder/sizehoc";
+import withIs from "../higherorder/sizehoc";
 
 export const TableContainer = styled.div.attrs(props => ({
 	className: `table-container`
@@ -16,4 +16,4 @@ const Table = styled.div.attrs(({ratio}) => ({
 	className: `table ${ratio && ratio}`
 }))``;
 
-export default withSize(Table);
+export default withIs(Table);

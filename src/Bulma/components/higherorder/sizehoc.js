@@ -12,7 +12,7 @@ const parseIs = is => {
 		return forwardedSize;
 	}
 };
-const withSize = WrappedComponent => ({is, rounded, children, ...rest}) => {
+const withIs = WrappedComponent => ({is, rounded, children, ...rest}) => {
 	let forwardedStyle = '';
 
 	if(is){
@@ -29,4 +29,4 @@ const withSize = WrappedComponent => ({is, rounded, children, ...rest}) => {
 	)
 };
 
-export default withSize;
+export default withIs;
