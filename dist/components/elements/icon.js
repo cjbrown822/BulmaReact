@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { withStyle } from "../higherorder/stylehoc";
-import withSize from "../higherorder/sizehoc";
+import { withThemeColor } from "../higherorder/stylehoc";
+import withIs from "../higherorder/sizehoc";
 const IconWrapper = styled.span.attrs(({
   styleName,
   direction
@@ -30,4 +30,4 @@ const Icon = ({
   }));
 };
 
-export default withSize(withStyle(Icon));
+export default withIs(withThemeColor(Icon));

@@ -4,7 +4,7 @@ import React, { Fragment, useContext } from "react";
 import styled from "styled-components";
 import withFieldOptions from "../higherorder/fieldhoc";
 import { InputContext, InputContextProvider } from "../../store/inputcontext";
-import withSize from "../higherorder/sizehoc";
+import withIs from "../higherorder/sizehoc";
 const FieldCore = styled.div.attrs(({
   addons,
   horizontal,
@@ -24,7 +24,7 @@ const ControlWrapper = styled.div.attrs(({
 }) => ({
   className: `control ${loading && loading} ${ratio && ratio} ${addons && addons} ${hasIconsRight ? `has-icons-right` : ''} ${hasIconsLeft ? `has-icons-left` : ''}`
 }))``;
-const Control = withSize(({
+const Control = withIs(({
   addons,
   ratio,
   loading,

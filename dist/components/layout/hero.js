@@ -3,8 +3,8 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 import React from "react";
 import styled from "styled-components";
 import Constants from "../../utils/constants";
-import { withStyle } from "../higherorder/stylehoc";
-import withSize from "../higherorder/sizehoc";
+import { withThemeColor } from "../higherorder/stylehoc";
+import withIs from "../higherorder/sizehoc";
 const HeroWrapper = styled.div.attrs(({
   bold,
   modifier,
@@ -48,4 +48,4 @@ export const HeroFooter = ({
 }) => React.createElement(HeroItem, {
   itemType: Constants.Hero.Items.Foot
 }, children);
-export default withSize(withStyle(Hero));
+export default withIs(withThemeColor(Hero));

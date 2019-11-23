@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Bulma from "./components/all";
 import './styles/main.scss';
 import Button, { SubmitButton } from "./components/elements/button";
@@ -30,7 +30,9 @@ const AstrickInputIcon = (direction, hasError) => React.createElement(Bulma.Icon
 });
 
 function App() {
-  return React.createElement(Bulma.Hero, {
+  return React.createElement(Fragment, null, React.createElement(Bulma.NavBar, {
+    light: true
+  }, React.createElement(Bulma.NavBrand, null, React.createElement(Bulma.NavBarItem.div, null, "Billed Simply"), React.createElement(Bulma.NavBarBurger, null))), React.createElement(Bulma.Hero, {
     is: "fullheight"
   }, React.createElement(Bulma.Modal, null, React.createElement(Bulma.Box, null, React.createElement(Bulma.OrderedList, {
     is: "lower-roman"
@@ -163,7 +165,7 @@ function App() {
   }, React.createElement(Bulma.Menu, null, React.createElement(Bulma.MenuLabel, null, "My Menu Label"), React.createElement(Bulma.MenuList, null, React.createElement(Bulma.MenuListItem, null, "First"), React.createElement(Bulma.MenuListItem, null, "Second"), React.createElement(Bulma.MenuListItem, null, "Third"), React.createElement(Bulma.MenuSubList, {
     label: "Sub menu list",
     is: "active"
-  }, React.createElement(Bulma.MenuListItem, null, "Third"), React.createElement(Bulma.MenuListItem, null, "Third"), React.createElement(Bulma.MenuListItem, null, "Third")))))))));
+  }, React.createElement(Bulma.MenuListItem, null, "Third"), React.createElement(Bulma.MenuListItem, null, "Third"), React.createElement(Bulma.MenuListItem, null, "Third"))))))))));
 }
 
 export default App;

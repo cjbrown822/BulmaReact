@@ -2,10 +2,10 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { withStyle } from "../higherorder/stylehoc";
-import withSize from "../higherorder/sizehoc";
+import { withThemeColor } from "../higherorder/stylehoc";
+import withIs from "../higherorder/sizehoc";
 import { FormContext } from "../../store/formcontext";
-const Button = withSize(withStyle(styled.button.attrs(({
+const Button = withIs(withThemeColor(styled.button.attrs(({
   disabled = false,
   type = "button",
   styleName,
@@ -26,4 +26,4 @@ export const SubmitButton = props => {
 export const ResetButton = props => React.createElement(Button, _extends({
   type: "reset"
 }, props));
-export default withSize(Button);
+export default withIs(Button);

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { withStyle } from "../higherorder/stylehoc";
-const NotificationWrapper = withStyle(styled.div.attrs(({
+import { withThemeColor } from "../higherorder/stylehoc";
+const NotificationWrapper = withThemeColor(styled.div.attrs(({
   styleName
 }) => ({
   className: `notification ${styleName && `is-${styleName}`}`

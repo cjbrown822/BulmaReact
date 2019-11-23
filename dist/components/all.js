@@ -32,6 +32,7 @@ import DropDown, { DropDownItem, DropDownDivider } from "./items/dropdown";
 import Menu, { MenuLabel, MenuList, MenuSubList, MenuListItem } from "./items/menu";
 import Message, { MessageHeader, MessageBody } from "./items/message";
 import Modal, { ModalCard, ModalCardBody, ModalCardFooter, ModalCardHeader } from "./items/modal";
+import NavBar, { NavBarBurger, NavBarDivider, NavBarDropdown, NavBarDropdownMenu, NavBarEnd, NavBarItem, NavBarLink, NavBarMenu, NavBarStart, NavBrand } from "./items/navbar";
 const Bulma = {
   Container,
   Level,
@@ -105,6 +106,17 @@ const Bulma = {
   ModalCard,
   ModalCardHeader,
   ModalCardFooter,
-  ModalCardBody
+  ModalCardBody,
+  NavBarStart,
+  NavBrand,
+  NavBarMenu,
+  NavBarLink,
+  NavBarItem,
+  NavBarEnd,
+  NavBarDropdownMenu,
+  NavBarDropdown,
+  NavBarDivider,
+  NavBarBurger,
+  NavBar
 };
 export default Bulma;

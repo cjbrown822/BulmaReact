@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import withSize from "../higherorder/sizehoc";
+import withIs from "../higherorder/sizehoc";
 const ImageWrapper = styled.figure.attrs(({
   ratio
 }) => ({
@@ -26,4 +26,4 @@ const Image = props => {
   }));
 };
 
-export default withSize(Image);
+export default withIs(Image);

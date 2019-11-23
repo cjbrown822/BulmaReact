@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import withSize from "../higherorder/sizehoc";
+import withIs from "../higherorder/sizehoc";
 const Menu = styled.aside.attrs(props => ({
   className: `menu`
 }))``;
@@ -10,7 +10,7 @@ export const MenuLabel = styled.p.attrs(props => ({
 export const MenuList = styled.ul.attrs(props => ({
   className: `menu-list`
 }))``;
-const MenuListItemLabel = withSize(styled.a.attrs(({
+const MenuListItemLabel = withIs(styled.a.attrs(({
   ratio,
   href
 }) => ({

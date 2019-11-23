@@ -2,13 +2,13 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React from "react";
 import styled from "styled-components";
-import withSize from "../higherorder/sizehoc";
+import withIs from "../higherorder/sizehoc";
 const Content = styled.div.attrs(({
   ratio
 }) => ({
   className: `content`
 }))``;
-const OrderedListBase = withSize(styled.ol.attrs(({
+const OrderedListBase = withIs(styled.ol.attrs(({
   ratio
 }) => ({
   className: `${ratio}`

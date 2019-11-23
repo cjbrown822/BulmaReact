@@ -18,7 +18,7 @@ const parseIs = is => {
   }
 };
 
-const withSize = WrappedComponent => ({
+const withIs = WrappedComponent => ({
   is,
   rounded,
   children,
@@ -42,4 +42,4 @@ const withSize = WrappedComponent => ({
   }, rest), children);
 };
 
-export default withSize;
+export default withIs;

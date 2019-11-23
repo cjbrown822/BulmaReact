@@ -2,11 +2,11 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React, { Fragment, useContext } from "react";
 import styled from "styled-components";
-import withSize from "../higherorder/sizehoc";
-import { withStyle } from "../higherorder/stylehoc";
+import withIs from "../higherorder/sizehoc";
+import { withThemeColor } from "../higherorder/stylehoc";
 import { InputContext } from "../../store/inputcontext";
 import PropTypes from "prop-types";
-const SelectWrapper = withSize(withStyle(styled.div.attrs(({
+const SelectWrapper = withIs(withThemeColor(styled.div.attrs(({
   ratio,
   styleName,
   multiple,

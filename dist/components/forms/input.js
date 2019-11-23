@@ -1,13 +1,13 @@
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 import React, { useEffect, useCallback, useState, useContext, Fragment } from "react";
-import { withStyle } from "../higherorder/stylehoc";
+import { withThemeColor } from "../higherorder/stylehoc";
 import Proptypes from "prop-types";
 import styled from "styled-components";
 import { InputContext } from "../../store/inputcontext";
-import withSize from "../higherorder/sizehoc";
+import withIs from "../higherorder/sizehoc";
 import withValidation from "../higherorder/validationhoc";
-const InputCore = withStyle(styled.input.attrs(({
+const InputCore = withThemeColor(styled.input.attrs(({
   ratio,
   type,
   styleName
@@ -53,4 +53,4 @@ Input.propTypes = {
     message: Proptypes.string.isRequired
   }))
 };
-export default withValidation(withSize(Input));
+export default withValidation(withIs(Input));

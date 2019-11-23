@@ -2,7 +2,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React from "react";
 import styled from "styled-components";
-import { withStyle } from "../higherorder/stylehoc";
+import { withThemeColor } from "../higherorder/stylehoc";
 const FooterWrapper = styled.footer.attrs(({
   styleName
 }) => ({
@@ -17,4 +17,4 @@ const Footer = ({
   styleName: styleName
 }, rest), children);
 
-export default withStyle(Footer);
+export default withThemeColor(Footer);
