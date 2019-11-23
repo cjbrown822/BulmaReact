@@ -10,7 +10,7 @@ const NavBar = withIs(withThemeColor(styled.nav.attrs(({arialLabel, styleName, r
 }))``));
 
 export const NavBrand = styled.div.attrs(props => ({
-	className: `nav-brand`
+	className: `navbar-brand`
 }))``;
 
 const NavBarBurgerWrapper = withIs(styled.a.attrs(({ratio}) => ({
@@ -44,7 +44,7 @@ export const NavBarItem = {
 	a: withIs(styled.a.attrs(({ratio}) => ({
 		className: `navbar-item ${ratio ? `${ratio}` : ''}`
 	}))``),
-	div: withIs(styled.a.attrs(({ratio}) => ({
+	div: withIs(styled.div.attrs(({ratio}) => ({
 		className: `navbar-item ${ratio ? `${ratio}` : ''}`
 	}))``)
 };

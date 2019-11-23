@@ -1,6 +1,6 @@
 {
   "name": "@cjbrown822/bulma-react",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "private": false,
   "author": "Chris Brown",
   "license": "MIT",
@@ -22,7 +22,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "publish:npm": "SET NODE_ENV=production && npx babel src/Bulma --out-dir dist --copy-files"
+    "publish:npm": "SET NODE_ENV=production && npx babel src/Bulma --out-dir dist --copy-files",
+    "publish:npm:mac": "export NODE_ENV=production && npx babel src/Bulma --out-dir dist --copy-files"
   },
   "eslintConfig": {
     "extends": "react-app"
