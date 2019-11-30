@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import Bulma from "./components/all";
 
 import './styles/main.scss';
@@ -11,6 +11,7 @@ const LockInputIcon = (direction, hasError) => <Bulma.Icon icon={"lock"} directi
 const AstrickInputIcon = (direction, hasError) => <Bulma.Icon icon={"asterisk"} direction={direction} danger={hasError} is={"small"}/>;
 
 function App() {
+    let [active, setActive] = useState(false);
   return (
       <Fragment>
           <Bulma.NavBar light>
@@ -18,8 +19,27 @@ function App() {
                   <Bulma.NavBarItem.div>
                       Billed Simply
                   </Bulma.NavBarItem.div>
-                  <Bulma.NavBarBurger/>
+                  <Bulma.NavBarBurger activate={setActive} active={active}/>
               </Bulma.NavBrand>
+              <Bulma.NavBarMenu active={active}>
+                  <Bulma.NavBarStart>
+                      <Bulma.NavBarItem.a>
+                          Customers
+                      </Bulma.NavBarItem.a>
+                      <Bulma.NavBarItem.a>
+                          Projects
+                      </Bulma.NavBarItem.a>
+                      <Bulma.NavBarItem.a>
+                          Contracts
+                      </Bulma.NavBarItem.a>
+                      <Bulma.NavBarItem.a>
+                          Time Tracking
+                      </Bulma.NavBarItem.a>
+                      <Bulma.NavBarItem.a>
+                          Invoices
+                      </Bulma.NavBarItem.a>
+                  </Bulma.NavBarStart>
+              </Bulma.NavBarMenu>
           </Bulma.NavBar>
           <Bulma.Hero is={"fullheight"}>
               <Bulma.Modal>

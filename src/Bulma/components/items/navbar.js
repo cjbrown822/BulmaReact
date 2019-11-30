@@ -13,23 +13,34 @@ export const NavBrand = styled.div.attrs(props => ({
 	className: `navbar-brand`
 }))``;
 
-const NavBarBurgerWrapper = withIs(styled.a.attrs(({ratio}) => ({
-	className: `navbar-burger ${ratio ? `${ratio}` : ''}`,
+const NavBarBurgerWrapper = withIs(styled.a.attrs(({ratio, active}) => ({
+	className: `navbar-burger ${ratio ? `${ratio}` : ''} ${active && 'is-active'}`,
 	arialLabel: `menu`,
 	ariaExpanded: false,
 	role: 'button'
 }))``);
 
-export const NavBarBurger = props => (
-	<NavBarBurgerWrapper>
-		<span aria-hidden={true}/>
-		<span aria-hidden={true}/>
-		<span aria-hidden={true}/>
-	</NavBarBurgerWrapper>
-);
+export const NavBarBurger = props => {
+	const {
+		activate,
+		active,
+		...rest
+	} = {...props};
+	const onClick = e => {
+		if(activate) activate(!active);
+	};
+	return(
+		<NavBarBurgerWrapper {...rest} onClick={onClick} active={active}>
+			<span aria-hidden={true}/>
+			<span aria-hidden={true}/>
+			<span aria-hidden={true}/>
+		</NavBarBurgerWrapper>
+	)
+};
 
-export const NavBarMenu = styled.div.attrs(({ratio}) => ({
-	className: `navbar-menu ${ratio ? `${ratio}` : ''}`
+export const NavBarMenu = styled.div.attrs(({ratio, active, onClick}) => ({
+	className: `navbar-menu ${ratio ? `${ratio}` : ''} ${active && 'is-active'}`,
+	onClick: onClick
 }))``;
 
 export const NavBarStart = styled.div.attrs(() => ({

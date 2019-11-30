@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import Bulma from "./components/all";
 import './styles/main.scss';
 import Button, { SubmitButton } from "./components/elements/button";
@@ -30,9 +30,15 @@ const AstrickInputIcon = (direction, hasError) => React.createElement(Bulma.Icon
 });
 
 function App() {
+  let [active, setActive] = useState(false);
   return React.createElement(Fragment, null, React.createElement(Bulma.NavBar, {
     light: true
-  }, React.createElement(Bulma.NavBrand, null, React.createElement(Bulma.NavBarItem.div, null, "Billed Simply"), React.createElement(Bulma.NavBarBurger, null))), React.createElement(Bulma.Hero, {
+  }, React.createElement(Bulma.NavBrand, null, React.createElement(Bulma.NavBarItem.div, null, "Billed Simply"), React.createElement(Bulma.NavBarBurger, {
+    activate: setActive,
+    active: active
+  })), React.createElement(Bulma.NavBarMenu, {
+    active: active
+  }, React.createElement(Bulma.NavBarStart, null, React.createElement(Bulma.NavBarItem.a, null, "Customers"), React.createElement(Bulma.NavBarItem.a, null, "Projects"), React.createElement(Bulma.NavBarItem.a, null, "Contracts"), React.createElement(Bulma.NavBarItem.a, null, "Time Tracking"), React.createElement(Bulma.NavBarItem.a, null, "Invoices")))), React.createElement(Bulma.Hero, {
     is: "fullheight"
   }, React.createElement(Bulma.Modal, null, React.createElement(Bulma.Box, null, React.createElement(Bulma.OrderedList, {
     is: "lower-roman"
