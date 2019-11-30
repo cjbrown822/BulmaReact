@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import withIs from "../higherorder/sizehoc";
 
-export const TableContainer = styled.table.attrs(props => ({
+export const TableContainer = styled.div.attrs(props => ({
 	className: `table-container`
 }))``;
 
@@ -12,7 +12,7 @@ export const TableCellHeading = styled.th``;
 export const TableRow = styled.tr``;
 export const TableBody = styled.tbody``;
 
-const Table = styled.div.attrs(({ratio}) => ({
+const Table = styled.table.attrs(({ratio}) => ({
 	className: `table ${ratio && ratio}`
 }))``;
 
