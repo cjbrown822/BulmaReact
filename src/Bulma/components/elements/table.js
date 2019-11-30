@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import withIs from "../higherorder/sizehoc";
 
-export const TableContainer = styled.div.attrs(props => ({
+export const TableContainer = styled.table.attrs(props => ({
 	className: `table-container`
 }))``;
 
