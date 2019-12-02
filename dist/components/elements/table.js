@@ -7,7 +7,11 @@ export const TableHeader = styled.thead``;
 export const TableFooter = styled.tfoot``;
 export const TableCell = styled.td``;
 export const TableCellHeading = styled.th``;
-export const TableRow = withIs(styled.tr``);
+export const TableRow = withIs(styled.tr.attrs(({
+  ratio
+}) => ({
+  className: `${ratio && ratio}`
+}))``);
 export const TableBody = styled.tbody``;
 const Table = styled.table.attrs(({
   ratio
