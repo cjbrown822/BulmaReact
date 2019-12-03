@@ -7,10 +7,10 @@ const FormCore = styled.form.attrs(({style}) => ({
 	className: "form"
 }))``;
 
-const Form = ({ children, style }) => {
+const Form = ({ children, style, ...rest }) => {
 	return (
 		<FormContextProvider>
-			<FormCore style={style}>
+			<FormCore style={style} {...rest}>
 				{children}
 			</FormCore>
 		</FormContextProvider>
