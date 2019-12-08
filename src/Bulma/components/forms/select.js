@@ -15,7 +15,7 @@ const Select = ({name, is, multiple, numRows,children, icon, ...rest}) => {
 	return (
 		<Fragment>
 			<SelectWrapper is={is} multiple={multiple} {...rest}>
-				<select multiple={multiple} size={numRows} name={name}>
+				<select multiple={multiple} size={numRows} name={name} {...rest}>
 					{children}
 				</select>
 			</SelectWrapper>
